@@ -1,11 +1,8 @@
 
+import Home from "../components/HomeComponent.vue";
+import Stone from "../components/StoneComponents.vue";
 
-const Posts = () =>import ( '../components/PostsComponent.vue');
-
-const Createposts = () =>import ( '../components/CreatepostComponent.vue');
-
-const Editposts = () =>import ( '../components/EditpostComponent.vue');
-
+import Review from "../components/ReviewComponents.vue";
 
 
 
@@ -13,22 +10,22 @@ const Editposts = () =>import ( '../components/EditpostComponent.vue');
 
 
 export default [
+    {
+        path: "/",
+        name: "Home",
+        component: Home,
+    },
+    {
+        path: "/stone",
+        name: "Stone",
+        component: Stone,
+        
+    },
+    {
+        path: "/review",
+        name: "Review",
+        component: Review,
+        
+    },
     
-    {
-        path: '/posts',
-        component: Posts,
-        name: 'Posts',
-    },
-    {
-        path: '/posts/add',
-        component: Createposts,
-        name: 'Createposts',
-
-    },
-    {
-        path: '/posts/edit/:id',
-        component: Editposts,
-        name: 'Editposts',
-
-    }
-]
+];
