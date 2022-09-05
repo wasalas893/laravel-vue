@@ -20,7 +20,7 @@ public function Logout(){
 
 public function Dashboard(){
 
-    return view('dashboard');
+    return view('backend.dashboard');
 
 }
 
