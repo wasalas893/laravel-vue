@@ -1,5 +1,4 @@
 
-
 require('./bootstrap');
 window.Vue = require('vue').default;
 require('../css/app.css');
@@ -19,6 +18,8 @@ Vue.use(loader);
 
 window.router = router;
 window.Fire = new Vue();
+
+
 
 
 

@@ -6,9 +6,11 @@ import home from './routes/home.js';
 Vue.use(VueRouter);
 
 
+
+
 export default new VueRouter({
     mode: 'history',
-    scrollBehavior: (to, from, savedPosition) => ({ y: 0 }), 
+    // scrollBehavior: (to, from, savedPosition) => ({ y: 0 }), 
     routes: [
         ...home,
     ],

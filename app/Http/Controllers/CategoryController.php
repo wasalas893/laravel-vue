@@ -16,6 +16,8 @@ class CategoryController extends Controller
 
     public function all(){
         $categorys=Categorys::orderBy('id','desc')->get();
+
+        
         return view('backend.category.all_category',compact('categorys'));
     }
 
@@ -26,12 +28,11 @@ class CategoryController extends Controller
             'cat_description' => 'required',
         ]);
 
-        $category=new Categorys();
+        $category=Categorys::create([
+            'cat_name'=>$request->input('cat_name'),
+            'cat_description'=>$request->input('cat_description'),
 
-        $category->cat_name=$request->input('cat_name');
-        $category->cat_description=$request->input('cat_description');
-
-        $category->save();
+        ]);
 
         $notification=array(
             'message'=>'Category Inserted Successfully',

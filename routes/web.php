@@ -8,11 +8,19 @@ use App\Http\Controllers\CategoryController;
 
 
 //vue routes
-Route::any('/', function () {
-    return view('main');
+
+Route::get('/', function () {
+    $meta = [];
+    $meta['keywords'] = "djsdjs";
+    $meta['description'] = "aDjadjDJ";
+    return view('pages.home', ['menu' => 'home', 'meta' => $meta]);
 });
-Route::any('/review', function () {
-    return view('main');
+
+Route::get('/review', function () {
+    $meta = [];
+    $meta['keywords'] = "";
+    $meta['description'] = "";
+    return view('pages.review', ['menu' => 'home', 'meta' => $meta]);
 });
 
 

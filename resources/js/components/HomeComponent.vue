@@ -1,7 +1,6 @@
 <template>
-
-<div>
   
+<div>
   <div class="top-banner-main-wrap" style="background-image: url('/images/stone_category/category_banner.jpg');">
     <div class="banner-main-txt-wrap" >
       <div class="main-head-wrap">
