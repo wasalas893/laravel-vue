@@ -34,6 +34,8 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
        
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
@@ -183,6 +185,37 @@
 <script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+  <script>
+    
+    @if(Session::has('message'))
+
+    var type="{{Session::get('alert-type','info')}}"
+
+    switch(type){
+      case 'info':
+      toastr.info(" {{Session::get('message')}}");
+      break;
+
+      case 'success':
+      toastr.success(" {{Session::get('message')}}");
+      break;
+
+      case 'warning':
+      toastr.warning(" {{Session::get('message')}}");
+      break;
+
+      case 'error':
+      toastr.error(" {{Session::get('message')}}");
+      break;
+    }
+
+    @endif
+  </script>
       
       
 

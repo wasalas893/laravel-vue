@@ -23,6 +23,7 @@ Route::group(['middleware'=>['auth:sanctum', 'verified']],function(){
 
     Route::get('/logout', [DashboardController::class, 'Logout'])->name('user.logout');
 
+    Route::get('/category/all',[CategoryController::class,'all'])->name('category.all');
     Route::get('/category/add',[CategoryController::class,'add'])->name('category.add');
     Route::post('/category/create',[CategoryController::class,'create'])->name('category.create');
 

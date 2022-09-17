@@ -16,6 +16,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
 
+  
+
        
     </head>
     <body class="hold-transition register-page">

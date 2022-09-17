@@ -7,21 +7,17 @@ use Auth;
 
 class DashboardController extends Controller
 {
-   
-public function Logout(){
+    public function Logout()
+    {
+        Auth::guard('web')->logout();
 
- 
+        return Redirect()
+            ->route('login')
+            ->with('success', 'User Logout');
+    }
 
-    Auth::guard('web')->logout();
-
-   return Redirect()->route('login')->with('success','User Logout');
-
-}
-
-public function Dashboard(){
-
-    return view('backend.dashboard');
-
-}
-
+    public function Dashboard()
+    {
+        return view('backend.dashboard');
+    }
 }
