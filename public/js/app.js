@@ -5306,8 +5306,15 @@ module.exports = {
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/HomeComponent.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -5558,49 +5565,41 @@ module.exports = {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      ca_all: [],
+      av_all: [],
+      Category_filter: [],
+      Available_filter: []
+    };
+  },
+  mounted: function mounted() {
+    this.getInitialCategory();
+    this.getInitialAvailability();
+  },
+  methods: {
+    getInitialCategory: function getInitialCategory() {
+      var _this = this;
+
+      try {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8000/api/category/data').then(function (response) {
+          return _this.ca_all = response;
+        });
+      } catch (e) {}
+    },
+    getInitialAvailability: function getInitialAvailability() {
+      var _this2 = this;
+
+      try {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://localhost:8000/api/availability/data').then(function (response) {
+          return _this2.av_all = response;
+        });
+      } catch (e) {}
+    }
+  }
+});
 
 /***/ }),
 
@@ -11191,7 +11190,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.c
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap);"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri.woff2\") format(\"woff2\"), url(\"/fonts/Calibri.woff\") format(\"woff\");\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\na {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.slider-content {\r\n    margin-left: 80px !important;\r\n}\r\n\r\nol.carousel-indicators.new {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 130px !important;\r\n    left: 0px !important;\r\n    z-index: 15;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n    -ms-flex-pack: center;\r\n    justify-content: center;\r\n    padding-left: 0;\r\n    margin-right: 82% !important;\r\n    margin-left: -15% !important;\r\n    list-style: none;\r\n    border-radius: 26px !important;\r\n    background: #FFFFFF !important;\r\n    border: 10px solid #FFFFFF!important;\r\n}\r\n\r\nol.carousel-indicators.new li {\r\n    position: relative;\r\n    -webkit-box-flex: 0;\r\n    -ms-flex: 0 1 auto;\r\n    flex: 0 1 auto;\r\n    width: 20px !important;\r\n    height: 20px !important;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    text-indent: -999px;\r\n    border-radius: 20px !important;\r\n}\r\n\r\nli.one-slider.active,\r\nli.two-slider.active,\r\nli.three-slider.active,\r\nli.for-slider.active,\r\nli.five-slider.active {\r\n    border: 2px solid !important;\r\n}\r\n\r\n.image-slider {\r\n    border: 20px solid #FFFFFF !important;\r\n}\r\n\r\n@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Bold.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Bold.woff\") format(\"woff\");\r\n    font-weight: bold;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Light.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Light.woff\") format(\"woff\");\r\n    font-weight: 300;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\nh1,\r\n.h1head {\r\n    /* font: normal normal normal 60px/66px EB Garamond; */\r\n    font-size: 44px !important;\r\n    line-height: 45px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0px;\r\n    color: #292929 !important;\r\n    opacity: 1;\r\n}\r\n\r\nh2,\r\n.h2head {\r\n    font-size: 34px !important;\r\n    line-height: 45px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\nh3,\r\n.h3head {\r\n    font-size: 24px !important;\r\n    line-height: 30px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.08px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf1,\r\n.home-journal-name-wrap p,\r\n.typesetting-description-wrap p,\r\n.mailchimp-description p,\r\n.sorting-select {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n    opacity: 1;\r\n}\r\n\r\n.sidebar-main-wrap ul li,\r\n.sidebar-main-wrap ul li a,\r\n.shape-name-wrap p,\r\n.Clarity-style-wrap .container-checkbox,\r\n.container-checkbox {\r\n    font-size: 14px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.05px;\r\n    color: #0d0d0d !important;\r\n}\r\n\r\n.paraf2,\r\n.footer-first-row-wrap a,\r\n.Clarity-style-wrap .container-checkbox {\r\n    font-size: 15px !important;\r\n    line-height: 24px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.05px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf3 {\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 1.6px;\r\n    color: #292929 !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf4,\r\n.footer-left-colum-wrap span,\r\n.footer-bottom-wrap span,\r\n.footer-bottom-description p {\r\n    font-size: 12px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 0px;\r\n    color: #4a4a4a !important;\r\n    opacity: 1;\r\n}\r\n\r\n.product-infor-form .form-control {\r\n    font-size: 14px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    color: #606060 !important;\r\n}\r\n\r\n.paraf5,\r\n.home-journal-date-wrap p {\r\n    font-size: 12px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 1.2px;\r\n    color: #848484 !important;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.side-bar-clear-link,\r\n.pagination .page-link,\r\n.top-breadcrum-wrap a,\r\n.top-breadcrum-wrap div {\r\n    font-size: 12px !important;\r\n    line-height: 28px !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.48px;\r\n    color: #848484;\r\n    text-transform: uppercase;\r\n    opacity: 1;\r\n}\r\n\r\n.nav-link {\r\n    text-align: right;\r\n    font-size: 14px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 3.2px;\r\n    color: #292929 !important;\r\n    text-transform: uppercase !important;\r\n    opacity: 1;\r\n}\r\n\r\n.insta-headtxt-prple {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    letter-spacing: 2.2px;\r\n    color: #724B8E;\r\n    font-family: 'Cinzel', serif;\r\n}\r\n\r\n.insta-headtxt-blck {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    letter-spacing: 2.2px;\r\n    color: #333333;\r\n    font-family: 'Cinzel', serif;\r\n}\r\n\r\n.sidebar-main-category-names,\r\n.sidebar-title {\r\n    font-size: 13px !important;\r\n    line-height: 24px !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 1.4px;\r\n    color: #0D0D0D;\r\n    text-transform: uppercase;\r\n    opacity: 1;\r\n}\r\n\r\n.link-explore {\r\n    font-size: 20px !important;\r\n    line-height: 32px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Caveat\", cursive;\r\n    letter-spacing: 0.06px;\r\n    color: #724b8e !important;\r\n}\r\n\r\n.link-explore i {\r\n    font-size: 13px;\r\n}\r\n\r\n.info-head-txt-prpl {\r\n    font-size: 17px !important;\r\n    line-height: 25px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #724b8e !important;\r\n}\r\n\r\n.letters-set p {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n}\r\n\r\n.process-head-txt,\r\n.info-head-txt,\r\n.review-description-wrap p,\r\n.faq-accord-full-section .card-body p,\r\n.contact-descrpt-txt p,\r\n.info-right-side-full-wrap p {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n}\r\n\r\n\r\n/* color codes  */\r\n\r\n.txt-darkblack,\r\n.sidebar-main-wrap ul li,\r\n.sidebar-main-wrap ul li a,\r\n.shape-name-wrap p,\r\n.Clarity-style-wrap .container-checkbox,\r\n.container-checkbox {\r\n    color: #606060 !important;\r\n}\r\n\r\n.txt-white {\r\n    color: #ffffff !important;\r\n}\r\n\r\n.txt-purple,\r\ndiv.lst-active-name,\r\n.page-item.active .page-link {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.txt-dark-gray {\r\n    color: #848484 !important;\r\n}\r\n\r\n.txt-light-gray {\r\n    color: #C4C4C4 !important;\r\n}\r\n\r\n.text-black {\r\n    color: #292929 !important\r\n}\r\n\r\n.page-link:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n}\r\n\r\n\r\n/* txt hover  */\r\n\r\n.link-explore:hover {\r\n    color: #BD98BB !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n.footer-first-row-wrap a:hover {\r\n    color: #927190 !important;\r\n}\r\n\r\n.custom-padding-12 {\r\n    padding-left: 12vw;\r\n    padding-right: 12vw;\r\n}\r\n\r\n.stone-info-slider .carousel-inner {\r\n    max-height: 800px;\r\n}\r\n\r\n\r\n/* Short Codes */\r\n\r\n.margin-center {\r\n    margin: 0px auto;\r\n}\r\n\r\n.sectionpa-85,\r\n.home-logo-mainwrap,\r\n.mailchimp-ful-wrap,\r\n.home-journal-main-wrap,\r\n.home-instagram-feed-wrap {\r\n    padding: 80px 0px;\r\n}\r\n\r\n.sectionpa-120 {\r\n    padding: 95px 0px;\r\n}\r\n\r\n.sectionpa-12 {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.txt-center,\r\n.home-middle-logo-main-wrap,\r\n.mailchimp-heading,\r\n.mailchimp-description,\r\n.footer-first-row-wrap,\r\n.footer-second-row-wrap,\r\n.footer-third-row-wrap,\r\n.home-map-section-head,\r\n.home-map-image-wrap,\r\n.home-journal-head-wrap,\r\n.home-journal-name-wrap p,\r\n.home-journal-date-wrap p {\r\n    text-align: center;\r\n}\r\n\r\n.txt-decor-non,\r\n.footer-first-row-wrap a {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.footer-first-row-wrap .list-inline-item:not(:last-child) {\r\n    margin-right: 1.5rem !important;\r\n}\r\n\r\n.txt-right,\r\n.footer-left-colum-wrap {\r\n    text-align: left;\r\n}\r\n\r\n.border-bt,\r\n.home-typesetting-ful-wrap,\r\n.home-custom-map-section,\r\n.footer-main-wrap {\r\n    border-bottom: 1px solid #E5E5E5;\r\n}\r\n\r\n.border-tp,\r\n.home-journal-main-wrap,\r\n.footer-main-wrap {\r\n    border-top: 1px solid #E5E5E5;\r\n}\r\n\r\n.purple-btn {\r\n    background: #724B8E;\r\n    border-radius: 28px;\r\n    font-size: 12px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    padding: 15px 30px;\r\n    letter-spacing: 1.28px;\r\n    color: #FFFFFF;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    transition: 0.3s;\r\n}\r\n\r\n.purple-btn:hover {\r\n    background: #BD98BB !important;\r\n    color: #FFFFFF !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n.white-btn-new {\r\n    background: transparent !important;\r\n    border-radius: 28px;\r\n    font-size: 12px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    padding: 15px 30px;\r\n    letter-spacing: 1.28px;\r\n    border: 1px solid #724B8E !important;\r\n    color: #724B8E;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    transition: 0.3s;\r\n}\r\n\r\n.white-btn-new:hover {\r\n    background: transparent !important;\r\n    color: #724B8E !important;\r\n    border: 2px solid #724B8E !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n\r\n/* slider style  */\r\n\r\n.home-slider-wrap img.d-block {\r\n    height: 100vh !important;\r\n    width: 100%;\r\n    object-fit: cover;\r\n    object-position: center center;\r\n}\r\n\r\n\r\n/* \r\n.carousel-caption {\r\n    top: 25% !important;\r\n} */\r\n\r\n.slider-custom-header-wrap.carousel-caption {\r\n    top: 6% !important;\r\n}\r\n\r\n.slider-custom-midle-image-wrap.carousel-caption {\r\n    top: 25%;\r\n}\r\n\r\n.slider-custom-midle-description-wrap.carousel-caption {\r\n    top: 75%\r\n}\r\n\r\n.home-slider-wrap ol.carousel-indicators {\r\n    bottom: 8%;\r\n}\r\n\r\n.home-slider-wrap .carousel-control-next,\r\n.home-slider-wrap .carousel-control-prev {\r\n    top: -112px !important;\r\n}\r\n\r\n.ourstone-wrap {\r\n    background: #ffffff 0% 0% no-repeat padding-box;\r\n    text-align: center;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    align-content: space-around;\r\n    justify-content: center;\r\n}\r\n\r\n.typesetting-rightimg-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.typesetting-rightimg-wrap img {\r\n    max-width: 75% !important;\r\n}\r\n\r\n.ourstone-wrap .link-explore {\r\n    margin-top: 25px;\r\n}\r\n\r\ndiv.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.ourstone-wrap {\r\n    min-height: 450px;\r\n    height: 450px;\r\n    object-fit: cover;\r\n    object-position: center center;\r\n}\r\n\r\n.home-slider-bottom-wrap {\r\n    position: absolute;\r\n    width: 100%;\r\n    bottom: 0;\r\n    background: #ffffff;\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    padding: 15px;\r\n    text-align: center;\r\n}\r\n\r\n.home-stones-slider-wrap:hover .home-slider-bottom-wrap {\r\n    opacity: 0.5;\r\n}\r\n\r\n.home-slider-bottom-wrap-txt p {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.home-slider-wrap ol.carousel-indicators li {\r\n    width: 8px;\r\n    height: 8px;\r\n    border-radius: 20px;\r\n}\r\n\r\n.carousel-indicators li {\r\n    width: 10px !important;\r\n    height: 10px !important;\r\n    border-radius: 50% !important;\r\n}\r\n\r\n.slider-heading {\r\n    padding-bottom: 0px;\r\n}\r\n\r\n.slider-paraf {\r\n    margin: 0px auto;\r\n    width: 35%;\r\n}\r\n\r\n.ourstone-wrap p {\r\n    width: 50%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.home-middle-logo-head {\r\n    width: 58%;\r\n    margin: 14px auto;\r\n}\r\n\r\n.home-middle-logo-descript {\r\n    width: 68%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.mailchimp-description {\r\n    width: 20%;\r\n    margin: 20px auto 0px;\r\n}\r\n\r\n.mailchimp-section-wrap {\r\n    background-image: url('/images/stones/subscribe-bg.jpg');\r\n    background-size: cover;\r\n}\r\n\r\n.mailchimp-form-wrap .form-control {\r\n    border: 1px solid #707070;\r\n    border-radius: 33px 33px;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append {\r\n    margin-left: -52px;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append .btn {\r\n    background: #724B8E;\r\n    border-radius: 33px;\r\n    border-top-left-radius: 33px !important;\r\n    border-bottom-left-radius: 33px !important;\r\n    padding: 15px 65px !important;\r\n    z-index: 9 !important;\r\n    text-align: center;\r\n    font-size: 13px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    letter-spacing: 1.28px;\r\n    color: #FFFFFF;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append .btn:hover {\r\n    background: #BD98BB !important;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group.mb-3.col-4 {\r\n    margin: 30px auto;\r\n}\r\n\r\n.btn-outline-secondary.focus,\r\n.btn-outline-secondary:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(108 117 125 / 0%) !important;\r\n}\r\n\r\n.form-control:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n    border: 1px solid #707070 !important;\r\n}\r\n\r\n\r\n/* .home-middle-background-section {\r\n    margin-top: 80px;\r\n    background-image: url('/images/Home/home-img-1.jpg');\r\n    background-position: center center;\r\n    background-size: cover;\r\n    min-height: 450px;\r\n    position: relative;\r\n} */\r\n\r\n.home-middle-background-section .col-md-12,\r\n.process-pg-middle-wrap .col-md-8 {\r\n    position: inherit !important;\r\n}\r\n\r\n.process-pg-middle-wrap {\r\n    margin-top: 0px !important;\r\n    min-height: 590px !important;\r\n}\r\n\r\n.home-middle-banner-bottom-txt-wrap {\r\n    position: absolute;\r\n    bottom: 3%;\r\n}\r\n\r\n.typesetting-description-wrap {\r\n    margin-top: 30px;\r\n}\r\n\r\n\r\n/* stone slider  */\r\n\r\n.stone-slider-wrap,\r\n.stone-slider-wrap .carousel-item {\r\n    height: calc(100vh - 300px);\r\n}\r\n\r\np.stone-slider-paraf {\r\n    width: 55%;\r\n    margin: 0px auto;\r\n}\r\n\r\nh2.stone-head-txt {\r\n    width: 35%;\r\n    margin: 15px auto;\r\n}\r\n\r\n.stone-slider-caption {\r\n    top: 20% !important;\r\n}\r\n\r\n.home-map-section-head p {\r\n    width: 38%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.home-journal-name-wrap p {\r\n    margin: 0px auto;\r\n    width: 58%;\r\n}\r\n\r\n.home-journal-date-wrap {\r\n    padding-top: 15px;\r\n}\r\n\r\n.home-journal-explore-btn-wrap {\r\n    text-align: center;\r\n    width: 100%;\r\n    padding: 40px 0px 0px 0px;\r\n}\r\n\r\n.home-typesetting-ful-wrap {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.home-colord-logo-mainwrap {\r\n    background: #FAFAFA;\r\n}\r\n\r\n.home-insta-right-wrap {\r\n    height: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.insta-description-wrap p {\r\n    text-align: center;\r\n    width: 60%;\r\n    margin: 10px auto;\r\n}\r\n\r\n.insta-head-wrap {\r\n    margin-top: 10px;\r\n}\r\n\r\n.insta-btn-wrap {\r\n    margin-top: 30px;\r\n}\r\n\r\n.reviews .top-banner-main-wrap {\r\n    min-height: 350px;\r\n    position: relative;\r\n}\r\n\r\n.reviews .banner-main-txt-wrap {\r\n    position: absolute;\r\n    top: 20%;\r\n    text-align: center;\r\n}\r\n\r\n\r\n/* product category page */\r\n\r\n.top-banner-main-wrap {\r\n    min-height: 350px !important;\r\n    position: relative !important;\r\n    background-position: center center !important;\r\n    background-repeat: no-repeat !important;\r\n    background-size: cover !important;\r\n}\r\n\r\n.banner-main-txt-wrap {\r\n    position: absolute !important;\r\n    top: 24% !important;\r\n    text-align: center !important;\r\n    width: 100% !important;\r\n}\r\n\r\n.banner-descript-wrap {\r\n    width: 34% !important;\r\n    margin: 20px auto !important;\r\n}\r\n\r\n.sidebar-section-1 {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-wrap: wrap;\r\n    padding-bottom: 10px;\r\n}\r\n\r\n.sidebar-section-3,\r\n.sidebar-section-4,\r\n.sidebar-section-5,\r\n.sidebar-section-6,\r\n.sidebar-section-7,\r\n.sidebar-section-8 {\r\n    margin-top: 35px;\r\n}\r\n\r\n.category-prod-img-wrap img {\r\n    width: 100%;\r\n    height: 320px;\r\n    object-fit: cover;\r\n}\r\n\r\n.products_listing-wrap .col-md-4:hover .category-prod-name-wrap p {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.products_listing-wrap .col-md-4:hover .category-prod-desc-wrap p {\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.categoryname-list-wrap a li,\r\n.available-list-wrap ul li {\r\n    line-height: 24px !important;\r\n}\r\n\r\n.color-codes-wrap {\r\n    background: #F73737;\r\n    height: 20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.sidebar-main-wrap ul {\r\n    list-style: none !important;\r\n}\r\n\r\n.category-head-txt-wrap {\r\n    border-bottom: 1px solid #EDEDED;\r\n}\r\n\r\n.category-head-txt-wrap p {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.category-head-txt-wrap {\r\n    padding-bottom: 8px;\r\n}\r\n\r\n.main-category-list-wrap {\r\n    padding-top: 8px;\r\n}\r\n\r\n.sidebar-wrap {\r\n    background: rgb(255, 255, 255);\r\n    height: 100%;\r\n    width: 0%;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    left: 0;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    /* padding-top: 60px; */\r\n}\r\n\r\n.color-code-li {\r\n    display: inline-flex;\r\n    flex-direction: row;\r\n    flex-wrap: nowrap;\r\n}\r\n\r\n.left-right-wrap-mobile {\r\n    display: none;\r\n}\r\n\r\n.filterby-column {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.top-filter-baner-wrap {\r\n    background: #eceef0;\r\n    border-bottom: 1px solid #bab7b7;\r\n    padding: 5px 20px 5px 20px;\r\n}\r\n\r\n.filter-closeicon-rightwrap a {\r\n    font-size: 30px;\r\n    color: #8c8c8c;\r\n}\r\n\r\n.mobile-category-raw {\r\n    padding: 20px 20px 0px 20px;\r\n}\r\n\r\n.mobile-category-section-wrap ul li {\r\n    list-style: none !important;\r\n}\r\n\r\n.shape-style-wrap {\r\n    display: flex;\r\n}\r\n\r\n.shape-style-wrap .container-checkbox .checkmark {\r\n    top: 8px;\r\n}\r\n\r\n.Clarity-style-wrap .container-checkbox .checkmark,\r\n.enhancement-list-wrap .container-checkbox .checkmark,\r\n.caratweight-style-wrap .container-checkbox .checkmark {\r\n    top: 5px !important;\r\n}\r\n\r\n.shape-name-wrap {\r\n    padding-left: 10px;\r\n    padding-top: 3px;\r\n}\r\n\r\n.shape-list-wrap li {\r\n    margin-top: 10px;\r\n}\r\n\r\n.shape-img-wrap img {\r\n    height: 28px;\r\n    width: auto;\r\n}\r\n\r\n.category-prod-name-wrap {\r\n    padding-top: 20px;\r\n}\r\n\r\n.products_listing-wrap {\r\n    padding-top: 30px;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap:nth-child(odd) {\r\n    background: #FAFAFA !important;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap:nth-child(even) {\r\n    background: #fafafa00 !important;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap {\r\n    background: #FAFAFA 0% 0% no-repeat padding-box;\r\n    padding: 16px 16px 16px 16px;\r\n}\r\n\r\n.stone-left-full-wrap,\r\n.info-right-side-full-wrap {\r\n    margin-top: 50px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.info-form-fields {\r\n    border-top: 0px solid #E5E5E5 !important;\r\n    border-left: 0px solid #E5E5E5 !important;\r\n    border-right: 0px solid #E5E5E5 !important;\r\n    border-bottom: 1px solid #E5E5E5 !important;\r\n    width: 65% !important;\r\n}\r\n\r\n.product-infor-form .form-submit-btn {\r\n    width: 65%;\r\n}\r\n\r\n.product-infor-form .form-control:focus {\r\n    border-top: 0px solid #E5E5E5 !important;\r\n    border-left: 0px solid #E5E5E5 !important;\r\n    border-right: 0px solid #E5E5E5 !important;\r\n    border-bottom: 1px solid #E5E5E5 !important;\r\n}\r\n\r\n.inqury-form-head {\r\n    padding-top: 15px;\r\n}\r\n\r\n.adipiscing-fullsection-process {\r\n    background-image: url('/images/process/choosing-stone-img1.jpg');\r\n    position: relative;\r\n    background-size: cover;\r\n    background-position: center;\r\n    margin-top: 50px;\r\n    -webkit-transition: background-image 0.8s ease-in-out;\r\n    transition: background-image 0.8s ease-in-out;\r\n}\r\n\r\n.adipiscing-fullsection-process .info-head-txt {\r\n    width: 80%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.our-company-wrap {\r\n    padding-top: 130px;\r\n    padding-bottom: 140px;\r\n}\r\n\r\n.being-based-right-wrap {\r\n    padding-bottom: 200px;\r\n}\r\n\r\n.our-company-head-wrap p {\r\n    width: 58%;\r\n    text-align: center;\r\n    margin: 25px auto;\r\n}\r\n\r\n.adipiscing-icon-wrap img {\r\n    height: 130px;\r\n    width: auto;\r\n}\r\n\r\n.adipiscing-heading-wrap {\r\n    padding-top: 15px;\r\n}\r\n\r\n.adipiscing-descript-wrap {\r\n    padding-top: 10px;\r\n}\r\n\r\n.adipiscing-descript-wrap {\r\n    width: 85%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.gemstone-on-request-head-fullwrap {\r\n    background: #F6F6F6;\r\n}\r\n\r\n.gemstone-on-request-contents {\r\n    background: #FFFFFF;\r\n}\r\n\r\n.gemstone-on-request-contents h3 {\r\n    width: 65%;\r\n    margin: 20px auto;\r\n    line-height: 36px !important;\r\n}\r\n\r\n.gemstone-on-request-contents h1 {\r\n    margin-top: 50px;\r\n}\r\n\r\n.gemstone-on-request-contents p.info-head-txt {\r\n    width: 58%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.gemstone-on-request-contents p.info-head-txt-prpl {\r\n    width: 70%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.genesis-purple-ful-wrap {\r\n    background: #724B8E;\r\n}\r\n\r\n.gemstone-on-request-fullwrap .container {\r\n    margin-top: -30%;\r\n}\r\n\r\n.gemstone-on-request-contents {\r\n    padding-top: 80px;\r\n}\r\n\r\n.gemston-request-img-wrap img {\r\n    max-height: 650px;\r\n    object-fit: cover;\r\n}\r\n\r\n.process-purple-ful-wrap {\r\n    background: #F8F4FA;\r\n}\r\n\r\n.genesis-purple-txt-wrap {\r\n    width: 60%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.process-purple-txt-wrap {\r\n    width: 85%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.genis-purpla-second-wrap {\r\n    margin-top: 40px;\r\n}\r\n\r\n.process-padding {\r\n    padding-top: 120px !important;\r\n}\r\n\r\n.popularised-content-wrap h2 {\r\n    text-align: center;\r\n    width: 78%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.popularised-bottom-wrap {\r\n    margin-top: 112px;\r\n}\r\n\r\n.popularised-bottom-wrap .adipiscing-descript-wrap {\r\n    width: 50%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.popularised-bottom-wrap .adipiscing-descript-wrap {\r\n    padding-top: 10px;\r\n}\r\n\r\n.popularised-ful-wrap {\r\n    background: #F8F4FA;\r\n}\r\n\r\n.journal-info-img-wrap img {\r\n    max-height: 600px;\r\n}\r\n\r\n.journal-info-name-wrap {\r\n    padding-top: 60px;\r\n}\r\n\r\n.client-name-btm-brder-wrap {\r\n    border: 3px solid #BD98BB;\r\n    width: 40px;\r\n}\r\n\r\n.review-head-wrap {\r\n    width: 70%;\r\n}\r\n\r\n.review-content-full-wrap {\r\n    padding-top: 60px;\r\n}\r\n\r\n.review-content-full-wrap .review-description-wrap {\r\n    width: 90%;\r\n}\r\n\r\n.process-2nd-full-wrap {\r\n    background: white;\r\n    padding: 45px 20px 45px 20px;\r\n}\r\n\r\n.process-2nd-full-wrap h3 {\r\n    width: 80%;\r\n    margin: 20px auto;\r\n}\r\n\r\n.studio-img-full-wrap {\r\n    background: #FAFAFA;\r\n}\r\n\r\n.re-cutting-fullwrap {\r\n    background: #ffffff;\r\n}\r\n\r\n.re-cutting-heading-wrap h3 {\r\n    width: 50%;\r\n    margin: 25px auto;\r\n    line-height: 37px !important;\r\n}\r\n\r\n.re-cutting-heading-wrap p {\r\n    width: 40%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.process-pg-middle-wrap p {\r\n    width: 50%;\r\n}\r\n\r\n.purple-background-bottom-section {\r\n    padding-bottom: 90px;\r\n}\r\n\r\n.studio-img-full-wrap .Occasionally-paraf {\r\n    margin-top: 20px;\r\n}\r\n\r\n.process-slider-wrap {\r\n    padding-left: 15vw;\r\n    padding-right: 15vw;\r\n}\r\n\r\n.process-slider-wrap .carousel-inner {\r\n    height: 550px;\r\n}\r\n\r\n.slider-top-abslt-txt {\r\n    position: absolute;\r\n    z-index: 9;\r\n}\r\n\r\n#processsliderindicator .carousel-caption {\r\n    top: 70% !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators li {\r\n    background-color: #C4C4C4 !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators li.active {\r\n    background-color: #2D4253 !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators {\r\n    margin-bottom: 20px !important;\r\n}\r\n\r\n\r\n/* The container */\r\n\r\n.container-checkbox {\r\n    display: block;\r\n    position: relative;\r\n    padding-left: 35px;\r\n    margin-bottom: 12px;\r\n    cursor: pointer;\r\n    font-size: 22px;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n}\r\n\r\n\r\n/* Hide the browser's default checkbox */\r\n\r\n.container-checkbox input {\r\n    position: absolute;\r\n    opacity: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* Create a custom checkbox */\r\n\r\n.container-checkbox .checkmark {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    height: 20px;\r\n    width: 20px;\r\n    background-color: #eee;\r\n}\r\n\r\n\r\n/* On mouse-over, add a grey background color */\r\n\r\n.container-checkbox:hover input~.checkmark {\r\n    background-color: #ccc;\r\n}\r\n\r\n\r\n/* When the checkbox is checked, add a blue background */\r\n\r\n.container-checkbox input:checked~.checkmark {\r\n    background-color: #333333;\r\n}\r\n\r\n\r\n/* Create the checkmark/indicator (hidden when not checked) */\r\n\r\n.container-checkbox .checkmark:after {\r\n    content: \"\";\r\n    position: absolute;\r\n    display: none;\r\n}\r\n\r\n\r\n/* Show the checkmark when checked */\r\n\r\n.container-checkbox input:checked~.checkmark:after {\r\n    display: block;\r\n}\r\n\r\n\r\n/* Style the checkmark/indicator */\r\n\r\n.container-checkbox .checkmark:after {\r\n    left: 7px;\r\n    top: 5px;\r\n    width: 5px;\r\n    height: 10px;\r\n    border: solid white;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: rotate(45deg);\r\n    -ms-transform: rotate(45deg);\r\n    transform: rotate(45deg);\r\n}\r\n\r\n\r\n/* footer section  */\r\n\r\n.footer-bottom-description {\r\n    width: 48%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.footer-second-row-wrap {\r\n    padding: 40px 0px;\r\n}\r\n\r\n.footer-main-wrap {\r\n    padding: 50px 0px;\r\n}\r\n\r\n.footer-bottom-wrap {\r\n    background: #fafafa !important;\r\n}\r\n\r\n\r\n/* @media screen and (min-width: 900px) and (max-width: 1540px) {\r\n    div#carouselExampleControls1 .carousel-item img,\r\n    #carouselExampleControls2 .carousel-item img,\r\n    #carouselExampleControls3 .carousel-item img,\r\n    #carouselExampleControls4 .carousel-item img {\r\n        min-height: 350px !important;\r\n    }\r\n} */\r\n\r\n#pinBoot {\r\n    position: relative;\r\n    max-width: 100%;\r\n    width: 100%;\r\n}\r\n\r\n#pinBoot img {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.white-panel {\r\n    position: absolute;\r\n    background: white;\r\n    padding: 0px;\r\n}\r\n\r\n.home-journal-head-wrap {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.process-head-wrap {\r\n    padding-top: 115px;\r\n}\r\n\r\n\r\n/*\r\n  stylize any heading tags withing white-panel below\r\n  */\r\n\r\n\r\n/* .white-panel:hover {\r\n    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);\r\n    margin-top: -5px;\r\n    -webkit-transition: all 0.3s ease-in-out;\r\n    -moz-transition: all 0.3s ease-in-out;\r\n    -o-transition: all 0.3s ease-in-out;\r\n    transition: all 0.3s ease-in-out;\r\n} */\r\n\r\n#faq .card {\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n}\r\n\r\n#faq .card .card-header {\r\n    border: 0;\r\n    border-radius: 2px;\r\n    padding: 0;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link {\r\n    color: #724B8E;\r\n    display: block;\r\n    text-align: left;\r\n    padding: 10px 0px;\r\n    border-bottom: 1px solid #E3E3E3;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link:after {\r\n    content: \"\\f106\";\r\n    font-family: FontAwesome;\r\n    font-weight: 900;\r\n    float: right;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link.collapsed {\r\n    color: #0D0D0D !important;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link.collapsed:after {\r\n    content: \"\\f107\";\r\n}\r\n\r\n#faq .card .collapsing {\r\n    line-height: 30px;\r\n}\r\n\r\n#faq .card .collapse {\r\n    border: 0;\r\n}\r\n\r\n#faq .card .collapse.show {\r\n    line-height: 30px;\r\n    color: #222;\r\n}\r\n\r\n.card-header {\r\n    background-color: transparent !important;\r\n}\r\n\r\n.btn.focus,\r\n.btn:focus {\r\n    outline: 0 !important;\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n}\r\n\r\n#faq .card-body {\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n    padding-bottom: 0px;\r\n}\r\n\r\n.faq-accord-full-section:nth-child(even) {\r\n    background: #ffffff !important;\r\n}\r\n\r\n.faq-accord-full-section:nth-child(odd) {\r\n    background: #FAFAFA !important;\r\n}\r\n\r\n.faq-accord-full-section {\r\n    margin-top: 30px;\r\n    background: #FAFAFA;\r\n    padding: 60px 0px;\r\n}\r\n\r\n.card {\r\n    background-color: transparent !important;\r\n}\r\n\r\n\r\n/* contact page */\r\n\r\n.contact-page-separator {\r\n    margin-top: 85px;\r\n    padding-bottom: 85px;\r\n    border-top: 1px solid #E5E5E5;\r\n    width: 78%;\r\n}\r\n\r\n.contact-page-full-wrap {\r\n    background-image: url('/images/contacts/contact-side-bg-repeat.jpg');\r\n    /* background-image: url('/images/stones/subscribe-bg.jpg'); */\r\n}\r\n\r\n.contact-right-wrap8,\r\n.contact-right-wrap82 {\r\n    background-color: #FFFFFF;\r\n}\r\n\r\n.contact-right-wrap8 {\r\n    padding-top: 85px;\r\n    padding-left: 50px !important;\r\n}\r\n\r\n.contact-right-wrap82 {\r\n    padding-bottom: 85px;\r\n    padding-left: 50px !important;\r\n}\r\n\r\na.btn.btn-primary.btn-sm.btn-text {\r\n    margin-left: 550px;\r\n}\r\n\r\n\r\n/* system */\r\n\r\n.navbar-laravel {\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);\r\n}\r\n\r\n.navbar-brand,\r\n.nav-link,\r\n.my-form,\r\n.login-form {\r\n    font-family: Raleway, sans-serif;\r\n}\r\n\r\n.my-form {\r\n    padding-top: 1.5rem;\r\n    padding-bottom: 1.5rem;\r\n}\r\n\r\n.my-form .row {\r\n    margin-left: 0;\r\n    margin-right: 0;\r\n}\r\n\r\n.login-form {\r\n    padding-top: 1.5rem;\r\n    padding-bottom: 1.5rem;\r\n}\r\n\r\n.login-form .row {\r\n    margin-left: 0;\r\n    margin-right: 0;\r\n}\r\n\r\n.login-form-backend {\r\n    margin-top: 100px !important;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    -webkit-appearance: none;\r\n    margin-right: 15px;\r\n    width: 200px;\r\n    height: 7px;\r\n    background: rgba(255, 255, 255, 0.6);\r\n    border-radius: 5px;\r\n    background-image: linear-gradient(#ff4500, #ff4500);\r\n    background-size: 70% 100%;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\ninput[type=\"range\"]::-webkit-slider-thumb {\r\n    -webkit-appearance: none;\r\n    height: 20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background: #ff4500;\r\n    cursor: ew-resize;\r\n    box-shadow: 0 0 2px 0 #555;\r\n    transition: background .3s ease-in-out;\r\n}\r\n\r\ninput[type=range]::-webkit-slider-runnable-track {\r\n    -webkit-appearance: none;\r\n    box-shadow: none;\r\n    border: none;\r\n    background: transparent;\r\n}\r\n\r\n.login-logo {\r\n    text-align: center !important;\r\n}\r\n\r\n.font-medium.text-red-600 {\r\n    color: red !important;\r\n}\r\n\r\nul.mt-3.list-disc.list-inside.text-sm.text-red-600 {\r\n    color: red !important;\r\n}\r\n\r\n.logout-button {\r\n    margin: auto;\r\n    text-align: center !important;\r\n}\r\n\r\n.card-title #table-buuton {\r\n    float: right !important;\r\n}\r\n\r\n.middle-section-one {\r\n    min-height: 10em;\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.process-section-two {\r\n    display: flex !important;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.section-process-color {\r\n    background-color: #FFFFFF !important;\r\n}\r\n\r\n.box-wrap-content {\r\n    padding-top: 120px !important;\r\n    padding-bottom: 120px !important;\r\n    padding-right: 0px !important;\r\n    padding-left: 0px !important;\r\n}\r\n\r\n.box-wrap-content-two {\r\n    padding-top: 50px !important;\r\n    padding-bottom: 50px !important;\r\n    padding-right: 0px !important;\r\n    padding-left: 0px !important;\r\n}\r\n\r\n.image-padding-section {\r\n    padding-left: 15px !important;\r\n    padding-right: 15px !important;\r\n}\r\n\r\n.padding-slider-image {\r\n    padding-top: 10px;\r\n    padding-right: 100px !important;\r\n}\r\n\r\n.tooltip {\r\n    position: relative;\r\n    display: inline-block;\r\n    border-bottom: 1px dotted black;\r\n}\r\n\r\n.tooltip .tooltiptext {\r\n    visibility: hidden;\r\n    width: 120px;\r\n    background-color: black;\r\n    color: #fff;\r\n    text-align: center;\r\n    border-radius: 6px;\r\n    padding: 5px 0;\r\n    /* Position the tooltip */\r\n    position: absolute;\r\n    z-index: 1;\r\n}\r\n\r\n.tooltip:hover .tooltiptext {\r\n    visibility: visible;\r\n}\r\n\r\n.mobile-nav-bar,\r\n.mobile-navlinks-outer-wrap {\r\n    display: none;\r\n}\r\n\r\n.mobile-navlinks-outer-wrap {\r\n    height: 100vh;\r\n    width: 0%;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #fff;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 25px;\r\n}\r\n\r\n.mobile-navlinks-wrap {\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    background-image: url('/images/stones/subscribe-bg.jpg');\r\n}\r\n\r\n.mobile-navlinks-wrap ul {\r\n    line-height: 60px;\r\n    list-style: none;\r\n}\r\n\r\n.mobile-nav-full-wrap .mobile-nav-toggler-wrap {\r\n    top: 20%;\r\n}\r\n\r\n.mobile-navlinks-wrap ul a.nav-link {\r\n    text-align: center !important;\r\n}\r\n\r\n.mobile-nav-full-wrap .mobile-nav-toggler-wrap a {\r\n    font-size: 30px;\r\n    color: #000;\r\n}\r\n\r\n.text-new-one {\r\n    margin-left: 0px !important;\r\n}\r\n\r\n.new-padding-top-section {\r\n    margin-top: 80px !important;\r\n}\r\n\r\n.body-content-section {\r\n    margin-top: 80px !important;\r\n}\r\n\r\n.footer-bottom-wrap {\r\n    width: 100%;\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.contact-icon-envelope i,\r\n.contact-icon-instagram i {\r\n    color: #BD98BB !important;\r\n    font-size: 25px;\r\n    margin-top: 12px;\r\n}\r\n\r\n.contact-left-ful-wrap a:hover {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.contact-icon svg {\r\n    width: 24px;\r\n    height: 32px;\r\n}\r\n\r\n.left-filter-wrap-desktop {\r\n    padding-top: 40px;\r\n}\r\n\r\n.color-list-wrap {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    margin-top: 8px;\r\n}\r\n\r\n.color-list-wrap ul {\r\n    padding-right: 10px;\r\n}\r\n\r\n.color-list-wrap input[type=checkbox]:before {\r\n    position: relative !important;\r\n    font-size: 14px !important;\r\n}\r\n\r\n.color-list-wrap input[type=checkbox]:checked:before {\r\n    position: absolute;\r\n    top: -3px !important;\r\n    left: 2px !important;\r\n    border: 0px solid #3ea8df !important;\r\n}\r\n\r\ninput[type=checkbox] {\r\n    -moz-appearance: none;\r\n    -webkit-appearance: none;\r\n    -o-appearance: none;\r\n    outline: none !important;\r\n    content: none;\r\n}\r\n\r\ninput[type=checkbox]:before {\r\n    font-family: \"FontAwesome\";\r\n    content: \"\\f00c\";\r\n    font-size: 15px;\r\n    border-radius: 4px;\r\n    color: transparent !important;\r\n    background: #fff0;\r\n    display: list-item;\r\n    width: 20px;\r\n    height: 20px;\r\n    border: 2px solid #d3d6db00;\r\n}\r\n\r\ninput[type=checkbox]:checked:before {\r\n    background: #3ea8df00;\r\n    color: #606060 !important;\r\n    border: 2px solid #3ea8df;\r\n    border-radius: 50%;\r\n}\r\n\r\n.irs--big .irs-bar {\r\n    background: #BD98BB !important;\r\n    border: 1px solid #BD98BB !important;\r\n    top: 36px !important;\r\n    height: 8px !important;\r\n}\r\n\r\n.irs--big .irs-handle {\r\n    top: 30px !important;\r\n    width: 18px !important;\r\n    height: 18px !important;\r\n    background: #BD98BB !important;\r\n}\r\n\r\n.irs--big .irs-from,\r\n.irs--big .irs-to,\r\n.irs--big .irs-single {\r\n    display: none !important;\r\n}\r\n\r\n.irs--big .irs-grid-text,\r\n.irs--big .irs-grid-pol {\r\n    color: #000 !important;\r\n}\r\n\r\n.irs--big.irs-with-grid {\r\n    height: 66px;\r\n}\r\n\r\n.sorting-select {\r\n    background: #FFFFFF 0% 0% no-repeat padding-box !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n    border-radius: 2px !important;\r\n    width: 158px !important;\r\n    height: 38px !important;\r\n}\r\n\r\n.form-control:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n}\r\n\r\nselect:focus-visible {\r\n    outline-offset: 0px !important;\r\n    outline-color: 1px solid #C4C4C4 !important;\r\n    outline: -webkit-focus-ring-color auto 0px !important;\r\n}\r\n\r\n.left-filter-wrap-desktop a:hover {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.product-name-descript-ful-wrap,\r\n.mobile-separator {\r\n    display: none;\r\n}\r\n\r\n.mobile-separator {\r\n    width: 100%;\r\n    height: 1px;\r\n    background: #e5e5e5;\r\n}\r\n\r\n.navbar-fixed-top {\r\n    position: inherit;\r\n    z-index: 9999;\r\n    background: #fff;\r\n    width: 100%;\r\n}\r\n\r\n#panorama-360-view {\r\n    width: 100%;\r\n    height: 400px;\r\n}\r\n\r\n.carousel-indicators li {\r\n    position: relative;\r\n    -webkit-box-flex: 0;\r\n    -ms-flex: 0 1 auto;\r\n    flex: 0 1 auto;\r\n    width: 30px;\r\n    height: 3px;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    text-indent: -999px;\r\n    background-color: rgba(255, 255, 255, .5);\r\n    border-radius: 20px !important;\r\n    height: 8px !important;\r\n    width: 8px !important;\r\n}\r\n\r\n.card-header.login-header {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    font-size: 20px !important;\r\n    text-align: center !important;\r\n}\r\n\r\n.login-button-section {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    background: #724B8E !important;\r\n    color: #fff !important;\r\n    border-color: #724B8E !important;\r\n}\r\n\r\n.card.new-login-section {\r\n    border-radius: 10px !important;\r\n    background-color: #fff !important;\r\n}\r\n\r\n.login-boy-new {\r\n    background: #E9ECEE !important;\r\n}\r\n\r\n.login-lable-text {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    font-size: 18px !important;\r\n}\r\n\r\n.forgot-passowrd {\r\n    font-family: \"EB Garamond\", serif !important;\r\n}\r\n\r\nli.nav-item.active .acive-color-header {\r\n    color: #BD98BB !important;\r\n}\r\n\r\na.list-inline-item.footter-class-new.active {\r\n    color: #BD98BB !important;\r\n}\r\n\r\nli.category-calss-new.active {\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.reviews-button-new {\r\n    text-align: center;\r\n    margin: auto;\r\n    display: block;\r\n}\r\n\r\n.desktop-left-navbar {\r\n    flex-direction: row;\r\n    align-content: space-between;\r\n    justify-content: space-evenly;\r\n}\r\n\r\n.desktop-left-navbar .navbar-nav .nav-item,\r\n.desktop-right-navbar .navbar-nav .nav-item {\r\n    padding: 15px;\r\n    padding-left: 0px;\r\n}\r\n\r\n.carousel-control-prev-icon {\r\n    background-image: url('/images/Home/left-arrow-svgrepo.svg') !important;\r\n}\r\n\r\n.carousel-control-next-icon {\r\n    background-image: url('/images/Home/right-arrow-svgrepo.svg') !important;\r\n}\r\n\r\n.home-slider-wrap .carousel-control-next-icon,\r\n.home-slider-wrap .carousel-control-prev-icon {\r\n    width: 50px !important;\r\n    height: 50px !important;\r\n}\r\n\r\n.carousel-control-next-icon,\r\n.carousel-control-prev-icon {\r\n    width: 35px !important;\r\n    height: 35px !important;\r\n}\r\n\r\n.genesis-middle-left-wrap h1 {\r\n    line-height: 50px !important;\r\n}\r\n\r\n.day-light-left-wrap {\r\n    display: block !important;\r\n}\r\n\r\n.day-light-left-wrap img {\r\n    width: 100% !important;\r\n    object-fit: cover;\r\n    height: 415px;\r\n}\r\n\r\n.day-light-right-wrap .inner-section-slider {\r\n    padding-left: 30px;\r\n    width: 90%;\r\n}\r\n\r\n.process-bottom-slider-wrap .carousel-item.image-slider img {\r\n    height: 310px;\r\n    object-fit: cover;\r\n}\r\n\r\n.day-light-right-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n}\r\n\r\n.left-catergory-wrap-column {\r\n    padding-left: 30px !important;\r\n}\r\n\r\n.img-container {\r\n    /* border: 1px solid #ccc; */\r\n    width: 100%;\r\n    max-width: 100%;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    cursor: ew-resize;\r\n}\r\n\r\n.img360 {\r\n    width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    line-height: 0;\r\n}\r\n\r\n.img360 img {\r\n    width: 100%;\r\n}\r\n\r\n#preload-imgs {\r\n    display: none;\r\n}\r\n\r\n.process-bottom-slider-wrap {\r\n    display: block !important;\r\n}\r\n\r\n.process-finally-let-wrap img,\r\n.process-finally-wrap {\r\n    width: 100% !important;\r\n    max-height: 450px !important;\r\n}\r\n\r\n.process-finally-right-wrap {\r\n    max-height: 450px !important;\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.w-75,\r\n.w-75 p {\r\n    width: 75% !important;\r\n}\r\n\r\n.process-daylight-ful-wrap {\r\n    margin-top: 45px;\r\n}\r\n\r\n.golden-standard-left-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.golden-standard-full-wrap .process-head-txt {\r\n    width: 80%;\r\n}\r\n\r\n.navbar-fixed-top-main {\r\n    position: fixed !important;\r\n}\r\n\r\n.nav-item-fixed {\r\n    display: none;\r\n}\r\n\r\n.mobile-navlink-top-wrap {\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.close-btn-wrap {\r\n    top: 0% !important;\r\n}\r\n\r\n.mobile-genis-map {\r\n    display: none;\r\n}\r\n\r\n.link-explore img {\r\n    width: 20px;\r\n    margin-left: -4px;\r\n}\r\n\r\na.btn.btn-link.forgot-passowrd {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.review-main-wrap .card-columns {\r\n    column-count: 2 !important;\r\n}\r\n\r\n.review-main-wrap {\r\n    padding-top: 30px;\r\n}\r\n\r\n.review-main-wrap .card {\r\n    border: 0px solid rgba(0, 0, 0, .125) !important;\r\n}\r\n\r\n.mobile-rotate-wrap {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: fixed;\r\n    background-color: #fff;\r\n    z-index: 1111111111111;\r\n}\r\n\r\np.rotate {\r\n    text-align: center;\r\n    top: 30%;\r\n    position: relative;\r\n    font-family: \"Open Sans\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 400;\r\n    line-height: 25px;\r\n    letter-spacing: 0px;\r\n}\r\n\r\ni.fa.fa-mobile {\r\n    font-size: 40px !important;\r\n}\r\n\r\n.top-breadcrum-wrap {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.main-nav {\r\n    box-shadow: 0px 1px 4px #0000000F;\r\n}\r\n\r\n.top-breadcrum-wrap {\r\n    padding: 10px;\r\n}\r\n\r\n.page-name-braker {\r\n    padding: 0px 25px;\r\n}\r\n\r\n.left-filter-wrap-desktop .sorting-select {\r\n    text-align: left !important;\r\n}\r\n\r\n.pagination .page-link {\r\n    padding: 8px 18px !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n    border-radius: 2px !important;\r\n}\r\n\r\n.pagination .page-item.active .page-link {\r\n    background: #FFFFFF 0% 0% no-repeat padding-box !important;\r\n    border: 1px solid #724B8E !important;\r\n    border-radius: 2px !important;\r\n}\r\n\r\n.pagination .page-link {\r\n    letter-spacing: 0.04px !important;\r\n}\r\n\r\n\r\n/* Стили для основного блока Preloader */\r\n\r\n.preloader {\r\n    /* Фиксируем блок на всю ширину и высоту окна, чтобы перекрывать все остальные элементы */\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 999999999999;\r\n    /* Центрируем анимацию Preloader */\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    /* При загрузке страницы, Preloader сразу отображается */\r\n    opacity: 1;\r\n    visibility: visible;\r\n    /* Добавляем затемнение */\r\n    background: white !important;\r\n    /* Добавляем плавный переход */\r\n    transition: opacity 1s, visibility 0s 0s;\r\n}\r\n\r\n\r\n/* Класс для скрытия Preloader */\r\n\r\n.preloader_hidden {\r\n    visibility: hidden;\r\n    opacity: 0;\r\n    transition: opacity 1s, visibility 0s 1s;\r\n}\r\n\r\n\r\n/* Скопированый код анимации Preloader */\r\n\r\n.sk-chase {\r\n    width: 250px;\r\n    height: 250px;\r\n    /* background: #fff; */\r\n    position: relative;\r\n    -webkit-animation: sk-chase 2.5s infinite linear both;\r\n    animation: sk-chase 2.5s infinite linear both;\r\n}\r\n\r\n.sk-chase-dot {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    -webkit-animation: sk-chase-dot 2s infinite ease-in-out both;\r\n    animation: sk-chase-dot 2s infinite ease-in-out both;\r\n}\r\n\r\n.sk-chase-dot:before {\r\n    content: '';\r\n    background-image: url('/images/d2e1d4a48e6f08379588df48168dd0d8.gif') !important;\r\n    display: block !important;\r\n    width: 100% !important;\r\n    height: 100% !important;\r\n    background-repeat: no-repeat !important;\r\n    background-size: contain !important;\r\n    background-position: center !important;\r\n    /* background-color: #3626a7; */\r\n    /* -webkit-animation: sk-chase-dot-before 5s infinite ease-in-out both !important;\r\n    animation: sk-chase-dot-before 5s infinite ease-in-out both !important;  */\r\n}\r\n\r\n.sk-chase-dot:nth-child(1) {\r\n    -webkit-animation-delay: -1.1s;\r\n    animation-delay: -1.1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(2) {\r\n    -webkit-animation-delay: -1s;\r\n    animation-delay: -1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(3) {\r\n    -webkit-animation-delay: -0.9s;\r\n    animation-delay: -0.9s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(4) {\r\n    -webkit-animation-delay: -0.8s;\r\n    animation-delay: -0.8s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(5) {\r\n    -webkit-animation-delay: -0.7s;\r\n    animation-delay: -0.7s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(6) {\r\n    -webkit-animation-delay: -0.6s;\r\n    animation-delay: -0.6s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(1):before {\r\n    -webkit-animation-delay: -1.1s;\r\n    animation-delay: -1.1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(2):before {\r\n    -webkit-animation-delay: -1s;\r\n    animation-delay: -1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(3):before {\r\n    -webkit-animation-delay: -0.9s;\r\n    animation-delay: -0.9s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(4):before {\r\n    -webkit-animation-delay: -0.8s;\r\n    animation-delay: -0.8s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(5):before {\r\n    -webkit-animation-delay: -0.7s;\r\n    animation-delay: -0.7s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(6):before {\r\n    -webkit-animation-delay: -0.6s;\r\n    animation-delay: -0.6s;\r\n}\r\n\r\n\r\n/* @-webkit-keyframes sk-chase {\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@keyframes sk-chase {\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@-webkit-keyframes sk-chase-dot {\r\n    80%,\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n} */\r\n\r\n\r\n/* @keyframes sk-chase-dot {\r\n    80%,\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n} */\r\n\r\n@-webkit-keyframes sk-chase-dot-before {\r\n    50% {\r\n        transform: scale(0.4);\r\n    }\r\n    100%,\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n\r\n@keyframes sk-chase-dot-before {\r\n    50% {\r\n        transform: scale(0.4);\r\n    }\r\n    100%,\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n\r\n.pagination .page-link:hover {\r\n    background: #FFF8FF !important;\r\n}\r\n\r\n.journal-pagination-wrap {\r\n    width: 100%;\r\n    /* text-align: center; */\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n\r\n/* QA */\r\n\r\n.footer-right-side {\r\n    text-align: right !important;\r\n    margin-right: 15px !important;\r\n    display: block !important;\r\n}\r\n\r\n.adamant-backend-log-full-wrap {\r\n    margin-top: 0px !important;\r\n    padding-top: 0px !important;\r\n    display: flex;\r\n    flex-direction: column;\r\n    height: 100%;\r\n    align-content: center;\r\n    justify-content: center;\r\n}\r\n\r\n.pagination {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    padding-left: 0;\r\n    list-style: none;\r\n    border-radius: 0.25rem;\r\n    justify-content: flex-end !important;\r\n}\r\n\r\n.stone-gap .ourstone-wrap {\r\n    min-height: 300px;\r\n    height: 300px;\r\n    -o-object-fit: cover;\r\n    object-fit: cover;\r\n    -o-object-position: center center;\r\n    object-position: center center;\r\n}\r\n\r\n[type=reset],\r\n[type=submit],\r\nbutton,\r\nhtml [type=button] {\r\n    -webkit-appearance: media-slider !important;\r\n}\r\n\r\n.journal-info-contents.mt-4.pb-5 p {\r\n    font-family: \"EB Garamond\", serif !important;\r\n}\r\n\r\n.home-middle-banner-bottom-txt-wrap h1 {\r\n    width: 60%;\r\n    line-height: 50px !important;\r\n}\r\n\r\n.journal-info-section .journal-info-contents img {\r\n    height: auto !important;\r\n    width: 100% !important;\r\n    object-fit: contain !important;\r\n}\r\n\r\n.journal-info-img-wrap img {\r\n    max-height: 600px;\r\n    object-fit: cover;\r\n}\r\n\r\nbutton.btn.btn-primary.login-button-section.w-100 {\r\n    margin-bottom: 20px !important;\r\n}\r\n\r\np.new-text {\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Light.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Light.woff\") format(\"woff\");\r\n    text-align: left;\r\n    position: absolute;\r\n    margin-left: auto;\r\n    background: #BD98BB;\r\n    color: white;\r\n    padding: 5px;\r\n    border-radius: 0px 0px 0px 10px;\r\n    font-size: 13px;\r\n    letter-spacing: 1.2px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.products_listing-wrap {\r\n    text-align: center !important;\r\n}\r\n\r\np.count-text.paraf1 {\r\n    margin-top: -50px;\r\n}\r\n\r\ninput[type=checkbox] {\r\n    box-sizing: border-box;\r\n    padding: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.paraf-margin {\r\n    margin-top: 20px;\r\n}\r\n\r\n.privacy-color {\r\n    font-weight: 500;\r\n    color: #000;\r\n}\r\n\r\n.paraf-padding {\r\n    padding-top: 10px;\r\n}\r\n\r\n.category-prod-img-wrap a {\r\n    display: flex;\r\n    flex-direction: row-reverse;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri.woff2\") format(\"woff2\"), url(\"/fonts/Calibri.woff\") format(\"woff\");\r\n    font-weight: normal;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\na {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.slider-content {\r\n    margin-left: 80px !important;\r\n}\r\n\r\nol.carousel-indicators.new {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 130px !important;\r\n    left: 0px !important;\r\n    z-index: 15;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: center;\r\n    -ms-flex-pack: center;\r\n    justify-content: center;\r\n    padding-left: 0;\r\n    margin-right: 82% !important;\r\n    margin-left: -15% !important;\r\n    list-style: none;\r\n    border-radius: 26px !important;\r\n    background: #FFFFFF !important;\r\n    border: 10px solid #FFFFFF!important;\r\n}\r\n\r\nol.carousel-indicators.new li {\r\n    position: relative;\r\n    -webkit-box-flex: 0;\r\n    -ms-flex: 0 1 auto;\r\n    flex: 0 1 auto;\r\n    width: 20px !important;\r\n    height: 20px !important;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    text-indent: -999px;\r\n    border-radius: 20px !important;\r\n}\r\n\r\nli.one-slider.active,\r\nli.two-slider.active,\r\nli.three-slider.active,\r\nli.for-slider.active,\r\nli.five-slider.active {\r\n    border: 2px solid !important;\r\n}\r\n\r\n.image-slider {\r\n    border: 20px solid #FFFFFF !important;\r\n}\r\n\r\n@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Bold.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Bold.woff\") format(\"woff\");\r\n    font-weight: bold;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\n@font-face {\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Light.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Light.woff\") format(\"woff\");\r\n    font-weight: 300;\r\n    font-style: normal;\r\n    font-display: swap;\r\n}\r\n\r\nh1,\r\n.h1head {\r\n    /* font: normal normal normal 60px/66px EB Garamond; */\r\n    font-size: 44px !important;\r\n    line-height: 45px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0px;\r\n    color: #292929 !important;\r\n    opacity: 1;\r\n}\r\n\r\nh2,\r\n.h2head {\r\n    font-size: 34px !important;\r\n    line-height: 45px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\nh3,\r\n.h3head {\r\n    font-size: 24px !important;\r\n    line-height: 30px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.08px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf1,\r\n.home-journal-name-wrap p,\r\n.typesetting-description-wrap p,\r\n.mailchimp-description p,\r\n.sorting-select {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n    opacity: 1;\r\n}\r\n\r\n.sidebar-main-wrap ul li,\r\n.sidebar-main-wrap ul li a,\r\n.shape-name-wrap p,\r\n.Clarity-style-wrap .container-checkbox,\r\n.container-checkbox {\r\n    font-size: 14px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.05px;\r\n    color: #0d0d0d !important;\r\n}\r\n\r\n.paraf2,\r\n.footer-first-row-wrap a,\r\n.Clarity-style-wrap .container-checkbox {\r\n    font-size: 15px !important;\r\n    line-height: 24px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.05px;\r\n    color: #0d0d0d !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf3 {\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 1.6px;\r\n    color: #292929 !important;\r\n    opacity: 1;\r\n}\r\n\r\n.paraf4,\r\n.footer-left-colum-wrap span,\r\n.footer-bottom-wrap span,\r\n.footer-bottom-description p {\r\n    font-size: 12px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 0px;\r\n    color: #4a4a4a !important;\r\n    opacity: 1;\r\n}\r\n\r\n.product-infor-form .form-control {\r\n    font-size: 14px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    color: #606060 !important;\r\n}\r\n\r\n.paraf5,\r\n.home-journal-date-wrap p {\r\n    font-size: 12px !important;\r\n    line-height: 26px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\" !important;\r\n    letter-spacing: 1.2px;\r\n    color: #848484 !important;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.side-bar-clear-link,\r\n.pagination .page-link,\r\n.top-breadcrum-wrap a,\r\n.top-breadcrum-wrap div {\r\n    font-size: 12px !important;\r\n    line-height: 28px !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.48px;\r\n    color: #848484;\r\n    text-transform: uppercase;\r\n    opacity: 1;\r\n}\r\n\r\n.nav-link {\r\n    text-align: right;\r\n    font-size: 14px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 3.2px;\r\n    color: #292929 !important;\r\n    text-transform: uppercase !important;\r\n    opacity: 1;\r\n}\r\n\r\n.insta-headtxt-prple {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    letter-spacing: 2.2px;\r\n    color: #724B8E;\r\n    font-family: 'Cinzel', serif;\r\n}\r\n\r\n.insta-headtxt-blck {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    font-size: 14px !important;\r\n    line-height: 24px !important;\r\n    letter-spacing: 2.2px;\r\n    color: #333333;\r\n    font-family: 'Cinzel', serif;\r\n}\r\n\r\n.sidebar-main-category-names,\r\n.sidebar-title {\r\n    font-size: 13px !important;\r\n    line-height: 24px !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 1.4px;\r\n    color: #0D0D0D;\r\n    text-transform: uppercase;\r\n    opacity: 1;\r\n}\r\n\r\n.link-explore {\r\n    font-size: 20px !important;\r\n    line-height: 32px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"Caveat\", cursive;\r\n    letter-spacing: 0.06px;\r\n    color: #724b8e !important;\r\n}\r\n\r\n.link-explore i {\r\n    font-size: 13px;\r\n}\r\n\r\n.info-head-txt-prpl {\r\n    font-size: 17px !important;\r\n    line-height: 25px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #724b8e !important;\r\n}\r\n\r\n.letters-set p {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n}\r\n\r\n.process-head-txt,\r\n.info-head-txt,\r\n.review-description-wrap p,\r\n.faq-accord-full-section .card-body p,\r\n.contact-descrpt-txt p,\r\n.info-right-side-full-wrap p {\r\n    font-size: 17px !important;\r\n    line-height: 28px !important;\r\n    font-weight: normal !important;\r\n    font-family: \"EB Garamond\", serif !important;\r\n    letter-spacing: 0.06px;\r\n    color: #606060 !important;\r\n}\r\n\r\n\r\n/* color codes  */\r\n\r\n.txt-darkblack,\r\n.sidebar-main-wrap ul li,\r\n.sidebar-main-wrap ul li a,\r\n.shape-name-wrap p,\r\n.Clarity-style-wrap .container-checkbox,\r\n.container-checkbox {\r\n    color: #606060 !important;\r\n}\r\n\r\n.txt-white {\r\n    color: #ffffff !important;\r\n}\r\n\r\n.txt-purple,\r\ndiv.lst-active-name,\r\n.page-item.active .page-link {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.txt-dark-gray {\r\n    color: #848484 !important;\r\n}\r\n\r\n.txt-light-gray {\r\n    color: #C4C4C4 !important;\r\n}\r\n\r\n.text-black {\r\n    color: #292929 !important\r\n}\r\n\r\n.page-link:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n}\r\n\r\n\r\n/* txt hover  */\r\n\r\n.link-explore:hover {\r\n    color: #BD98BB !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n.footer-first-row-wrap a:hover {\r\n    color: #927190 !important;\r\n}\r\n\r\n.custom-padding-12 {\r\n    padding-left: 12vw;\r\n    padding-right: 12vw;\r\n}\r\n\r\n.stone-info-slider .carousel-inner {\r\n    max-height: 800px;\r\n}\r\n\r\n\r\n/* Short Codes */\r\n\r\n.margin-center {\r\n    margin: 0px auto;\r\n}\r\n\r\n.sectionpa-85,\r\n.home-logo-mainwrap,\r\n.mailchimp-ful-wrap,\r\n.home-journal-main-wrap,\r\n.home-instagram-feed-wrap {\r\n    padding: 80px 0px;\r\n}\r\n\r\n.sectionpa-120 {\r\n    padding: 95px 0px;\r\n}\r\n\r\n.sectionpa-12 {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.txt-center,\r\n.home-middle-logo-main-wrap,\r\n.mailchimp-heading,\r\n.mailchimp-description,\r\n.footer-first-row-wrap,\r\n.footer-second-row-wrap,\r\n.footer-third-row-wrap,\r\n.home-map-section-head,\r\n.home-map-image-wrap,\r\n.home-journal-head-wrap,\r\n.home-journal-name-wrap p,\r\n.home-journal-date-wrap p {\r\n    text-align: center;\r\n}\r\n\r\n.txt-decor-non,\r\n.footer-first-row-wrap a {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.footer-first-row-wrap .list-inline-item:not(:last-child) {\r\n    margin-right: 1.5rem !important;\r\n}\r\n\r\n.txt-right,\r\n.footer-left-colum-wrap {\r\n    text-align: left;\r\n}\r\n\r\n.border-bt,\r\n.home-typesetting-ful-wrap,\r\n.home-custom-map-section,\r\n.footer-main-wrap {\r\n    border-bottom: 1px solid #E5E5E5;\r\n}\r\n\r\n.border-tp,\r\n.home-journal-main-wrap,\r\n.footer-main-wrap {\r\n    border-top: 1px solid #E5E5E5;\r\n}\r\n\r\n.purple-btn {\r\n    background: #724B8E;\r\n    border-radius: 28px;\r\n    font-size: 12px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    padding: 15px 30px;\r\n    letter-spacing: 1.28px;\r\n    color: #FFFFFF;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    transition: 0.3s;\r\n}\r\n\r\n.purple-btn:hover {\r\n    background: #BD98BB !important;\r\n    color: #FFFFFF !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n.white-btn-new {\r\n    background: transparent !important;\r\n    border-radius: 28px;\r\n    font-size: 12px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    padding: 15px 30px;\r\n    letter-spacing: 1.28px;\r\n    border: 1px solid #724B8E !important;\r\n    color: #724B8E;\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    transition: 0.3s;\r\n}\r\n\r\n.white-btn-new:hover {\r\n    background: transparent !important;\r\n    color: #724B8E !important;\r\n    border: 2px solid #724B8E !important;\r\n    text-decoration: none !important;\r\n}\r\n\r\n\r\n/* slider style  */\r\n\r\n.home-slider-wrap img.d-block {\r\n    height: 100vh !important;\r\n    width: 100%;\r\n    object-fit: cover;\r\n    object-position: center center;\r\n}\r\n\r\n\r\n/* \r\n.carousel-caption {\r\n    top: 25% !important;\r\n} */\r\n\r\n.slider-custom-header-wrap.carousel-caption {\r\n    top: 6% !important;\r\n}\r\n\r\n.slider-custom-midle-image-wrap.carousel-caption {\r\n    top: 25%;\r\n}\r\n\r\n.slider-custom-midle-description-wrap.carousel-caption {\r\n    top: 75%\r\n}\r\n\r\n.home-slider-wrap ol.carousel-indicators {\r\n    bottom: 8%;\r\n}\r\n\r\n.home-slider-wrap .carousel-control-next,\r\n.home-slider-wrap .carousel-control-prev {\r\n    top: -112px !important;\r\n}\r\n\r\n.ourstone-wrap {\r\n    background: #ffffff 0% 0% no-repeat padding-box;\r\n    text-align: center;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    align-content: space-around;\r\n    justify-content: center;\r\n}\r\n\r\n.typesetting-rightimg-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.typesetting-rightimg-wrap img {\r\n    max-width: 75% !important;\r\n}\r\n\r\n.ourstone-wrap .link-explore {\r\n    margin-top: 25px;\r\n}\r\n\r\ndiv.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.home-stone-slider .carousel-item img,\r\n.ourstone-wrap {\r\n    min-height: 450px;\r\n    height: 450px;\r\n    object-fit: cover;\r\n    object-position: center center;\r\n}\r\n\r\n.home-slider-bottom-wrap {\r\n    position: absolute;\r\n    width: 100%;\r\n    bottom: 0;\r\n    background: #ffffff;\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    padding: 15px;\r\n    text-align: center;\r\n}\r\n\r\n.home-stones-slider-wrap:hover .home-slider-bottom-wrap {\r\n    opacity: 0.5;\r\n}\r\n\r\n.home-slider-bottom-wrap-txt p {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.home-slider-wrap ol.carousel-indicators li {\r\n    width: 8px;\r\n    height: 8px;\r\n    border-radius: 20px;\r\n}\r\n\r\n.carousel-indicators li {\r\n    width: 10px !important;\r\n    height: 10px !important;\r\n    border-radius: 50% !important;\r\n}\r\n\r\n.slider-heading {\r\n    padding-bottom: 0px;\r\n}\r\n\r\n.slider-paraf {\r\n    margin: 0px auto;\r\n    width: 35%;\r\n}\r\n\r\n.ourstone-wrap p {\r\n    width: 50%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.home-middle-logo-head {\r\n    width: 58%;\r\n    margin: 14px auto;\r\n}\r\n\r\n.home-middle-logo-descript {\r\n    width: 68%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.mailchimp-description {\r\n    width: 20%;\r\n    margin: 20px auto 0px;\r\n}\r\n\r\n.mailchimp-section-wrap {\r\n    background-image: url('/images/stones/subscribe-bg.jpg');\r\n    background-size: cover;\r\n}\r\n\r\n.mailchimp-form-wrap .form-control {\r\n    border: 1px solid #707070;\r\n    border-radius: 33px 33px;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append {\r\n    margin-left: -52px;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append .btn {\r\n    background: #724B8E;\r\n    border-radius: 33px;\r\n    border-top-left-radius: 33px !important;\r\n    border-bottom-left-radius: 33px !important;\r\n    padding: 15px 65px !important;\r\n    z-index: 9 !important;\r\n    text-align: center;\r\n    font-size: 13px !important;\r\n    line-height: 22px !important;\r\n    font-weight: normal !important;\r\n    font-family: 'Open Sans', sans-serif !important;\r\n    letter-spacing: 1.28px;\r\n    color: #FFFFFF;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group-append .btn:hover {\r\n    background: #BD98BB !important;\r\n}\r\n\r\n.mailchimp-form-wrap .input-group.mb-3.col-4 {\r\n    margin: 30px auto;\r\n}\r\n\r\n.btn-outline-secondary.focus,\r\n.btn-outline-secondary:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(108 117 125 / 0%) !important;\r\n}\r\n\r\n.form-control:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n    border: 1px solid #707070 !important;\r\n}\r\n\r\n\r\n/* .home-middle-background-section {\r\n    margin-top: 80px;\r\n    background-image: url('/images/Home/home-img-1.jpg');\r\n    background-position: center center;\r\n    background-size: cover;\r\n    min-height: 450px;\r\n    position: relative;\r\n} */\r\n\r\n.home-middle-background-section .col-md-12,\r\n.process-pg-middle-wrap .col-md-8 {\r\n    position: inherit !important;\r\n}\r\n\r\n.process-pg-middle-wrap {\r\n    margin-top: 0px !important;\r\n    min-height: 590px !important;\r\n}\r\n\r\n.home-middle-banner-bottom-txt-wrap {\r\n    position: absolute;\r\n    bottom: 3%;\r\n}\r\n\r\n.typesetting-description-wrap {\r\n    margin-top: 30px;\r\n}\r\n\r\n\r\n/* stone slider  */\r\n\r\n.stone-slider-wrap,\r\n.stone-slider-wrap .carousel-item {\r\n    height: calc(100vh - 300px);\r\n}\r\n\r\np.stone-slider-paraf {\r\n    width: 55%;\r\n    margin: 0px auto;\r\n}\r\n\r\nh2.stone-head-txt {\r\n    width: 35%;\r\n    margin: 15px auto;\r\n}\r\n\r\n.stone-slider-caption {\r\n    top: 20% !important;\r\n}\r\n\r\n.home-map-section-head p {\r\n    width: 38%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.home-journal-name-wrap p {\r\n    margin: 0px auto;\r\n    width: 58%;\r\n}\r\n\r\n.home-journal-date-wrap {\r\n    padding-top: 15px;\r\n}\r\n\r\n.home-journal-explore-btn-wrap {\r\n    text-align: center;\r\n    width: 100%;\r\n    padding: 40px 0px 0px 0px;\r\n}\r\n\r\n.home-typesetting-ful-wrap {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.home-colord-logo-mainwrap {\r\n    background: #FAFAFA;\r\n}\r\n\r\n.home-insta-right-wrap {\r\n    height: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.insta-description-wrap p {\r\n    text-align: center;\r\n    width: 60%;\r\n    margin: 10px auto;\r\n}\r\n\r\n.insta-head-wrap {\r\n    margin-top: 10px;\r\n}\r\n\r\n.insta-btn-wrap {\r\n    margin-top: 30px;\r\n}\r\n\r\n.reviews .top-banner-main-wrap {\r\n    min-height: 350px;\r\n    position: relative;\r\n}\r\n\r\n.reviews .banner-main-txt-wrap {\r\n    position: absolute;\r\n    top: 20%;\r\n    text-align: center;\r\n}\r\n\r\n\r\n/* product category page */\r\n\r\n.top-banner-main-wrap {\r\n    min-height: 500px !important;\r\n    position: relative !important;\r\n    background-position: center center !important;\r\n    background-repeat: no-repeat !important;\r\n    background-size: cover !important;\r\n}\r\n\r\n.banner-main-txt-wrap {\r\n    position: absolute !important;\r\n    top: 60% !important;\r\n    text-align: center !important;\r\n    width: 100% !important;\r\n}\r\n\r\n.banner-descript-wrap {\r\n    width: 34% !important;\r\n    margin: 20px auto !important;\r\n}\r\n\r\n.sidebar-section-1 {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-wrap: wrap;\r\n    padding-bottom: 10px;\r\n}\r\n\r\n.sidebar-section-3,\r\n.sidebar-section-4,\r\n.sidebar-section-5,\r\n.sidebar-section-6,\r\n.sidebar-section-7,\r\n.sidebar-section-8 {\r\n    margin-top: 35px;\r\n}\r\n\r\n.category-prod-img-wrap img {\r\n    width: 100%;\r\n    height: 320px;\r\n    object-fit: cover;\r\n}\r\n\r\n.products_listing-wrap .col-md-4:hover .category-prod-name-wrap p {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.products_listing-wrap .col-md-4:hover .category-prod-desc-wrap p {\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.categoryname-list-wrap a li,\r\n.available-list-wrap ul li {\r\n    line-height: 24px !important;\r\n}\r\n\r\n.color-codes-wrap {\r\n    background: #F73737;\r\n    height: 20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.sidebar-main-wrap ul {\r\n    list-style: none !important;\r\n}\r\n\r\n.category-head-txt-wrap {\r\n    border-bottom: 1px solid #EDEDED;\r\n}\r\n\r\n.category-head-txt-wrap p {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.category-head-txt-wrap {\r\n    padding-bottom: 8px;\r\n}\r\n\r\n.main-category-list-wrap {\r\n    padding-top: 8px;\r\n}\r\n\r\n.sidebar-wrap {\r\n    background: rgb(255, 255, 255);\r\n    height: 100%;\r\n    width: 0%;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    left: 0;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    /* padding-top: 60px; */\r\n}\r\n\r\n.color-code-li {\r\n    display: inline-flex;\r\n    flex-direction: row;\r\n    flex-wrap: nowrap;\r\n}\r\n\r\n.left-right-wrap-mobile {\r\n    display: none;\r\n}\r\n\r\n.filterby-column {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.top-filter-baner-wrap {\r\n    background: #eceef0;\r\n    border-bottom: 1px solid #bab7b7;\r\n    padding: 5px 20px 5px 20px;\r\n}\r\n\r\n.filter-closeicon-rightwrap a {\r\n    font-size: 30px;\r\n    color: #8c8c8c;\r\n}\r\n\r\n.mobile-category-raw {\r\n    padding: 20px 20px 0px 20px;\r\n}\r\n\r\n.mobile-category-section-wrap ul li {\r\n    list-style: none !important;\r\n}\r\n\r\n.shape-style-wrap {\r\n    display: flex;\r\n}\r\n\r\n.shape-style-wrap .container-checkbox .checkmark {\r\n    top: 8px;\r\n}\r\n\r\n.Clarity-style-wrap .container-checkbox .checkmark,\r\n.enhancement-list-wrap .container-checkbox .checkmark,\r\n.caratweight-style-wrap .container-checkbox .checkmark {\r\n    top: 5px !important;\r\n}\r\n\r\n.shape-name-wrap {\r\n    padding-left: 10px;\r\n    padding-top: 3px;\r\n}\r\n\r\n.shape-list-wrap li {\r\n    margin-top: 10px;\r\n}\r\n\r\n.shape-img-wrap img {\r\n    height: 28px;\r\n    width: auto;\r\n}\r\n\r\n.category-prod-name-wrap {\r\n    padding-top: 20px;\r\n}\r\n\r\n.products_listing-wrap {\r\n    padding-top: 30px;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap:nth-child(odd) {\r\n    background: #FAFAFA !important;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap:nth-child(even) {\r\n    background: #fafafa00 !important;\r\n}\r\n\r\n.stone-info-left-sidebox-wrap {\r\n    background: #FAFAFA 0% 0% no-repeat padding-box;\r\n    padding: 16px 16px 16px 16px;\r\n}\r\n\r\n.stone-left-full-wrap,\r\n.info-right-side-full-wrap {\r\n    margin-top: 50px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.info-form-fields {\r\n    border-top: 0px solid #E5E5E5 !important;\r\n    border-left: 0px solid #E5E5E5 !important;\r\n    border-right: 0px solid #E5E5E5 !important;\r\n    border-bottom: 1px solid #E5E5E5 !important;\r\n    width: 65% !important;\r\n}\r\n\r\n.product-infor-form .form-submit-btn {\r\n    width: 65%;\r\n}\r\n\r\n.product-infor-form .form-control:focus {\r\n    border-top: 0px solid #E5E5E5 !important;\r\n    border-left: 0px solid #E5E5E5 !important;\r\n    border-right: 0px solid #E5E5E5 !important;\r\n    border-bottom: 1px solid #E5E5E5 !important;\r\n}\r\n\r\n.inqury-form-head {\r\n    padding-top: 15px;\r\n}\r\n\r\n.adipiscing-fullsection-process {\r\n    background-image: url('/images/process/choosing-stone-img1.jpg');\r\n    position: relative;\r\n    background-size: cover;\r\n    background-position: center;\r\n    margin-top: 50px;\r\n    -webkit-transition: background-image 0.8s ease-in-out;\r\n    transition: background-image 0.8s ease-in-out;\r\n}\r\n\r\n.adipiscing-fullsection-process .info-head-txt {\r\n    width: 80%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.our-company-wrap {\r\n    padding-top: 130px;\r\n    padding-bottom: 140px;\r\n}\r\n\r\n.being-based-right-wrap {\r\n    padding-bottom: 200px;\r\n}\r\n\r\n.our-company-head-wrap p {\r\n    width: 58%;\r\n    text-align: center;\r\n    margin: 25px auto;\r\n}\r\n\r\n.adipiscing-icon-wrap img {\r\n    height: 130px;\r\n    width: auto;\r\n}\r\n\r\n.adipiscing-heading-wrap {\r\n    padding-top: 15px;\r\n}\r\n\r\n.adipiscing-descript-wrap {\r\n    padding-top: 10px;\r\n}\r\n\r\n.adipiscing-descript-wrap {\r\n    width: 85%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.gemstone-on-request-head-fullwrap {\r\n    background: #F6F6F6;\r\n}\r\n\r\n.gemstone-on-request-contents {\r\n    background: #FFFFFF;\r\n}\r\n\r\n.gemstone-on-request-contents h3 {\r\n    width: 65%;\r\n    margin: 20px auto;\r\n    line-height: 36px !important;\r\n}\r\n\r\n.gemstone-on-request-contents h1 {\r\n    margin-top: 50px;\r\n}\r\n\r\n.gemstone-on-request-contents p.info-head-txt {\r\n    width: 58%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.gemstone-on-request-contents p.info-head-txt-prpl {\r\n    width: 70%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.genesis-purple-ful-wrap {\r\n    background: #724B8E;\r\n}\r\n\r\n.gemstone-on-request-fullwrap .container {\r\n    margin-top: -30%;\r\n}\r\n\r\n.gemstone-on-request-contents {\r\n    padding-top: 80px;\r\n}\r\n\r\n.gemston-request-img-wrap img {\r\n    max-height: 650px;\r\n    object-fit: cover;\r\n}\r\n\r\n.process-purple-ful-wrap {\r\n    background: #F8F4FA;\r\n}\r\n\r\n.genesis-purple-txt-wrap {\r\n    width: 60%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.process-purple-txt-wrap {\r\n    width: 85%;\r\n    text-align: center;\r\n    margin: 0px auto;\r\n}\r\n\r\n.genis-purpla-second-wrap {\r\n    margin-top: 40px;\r\n}\r\n\r\n.process-padding {\r\n    padding-top: 120px !important;\r\n}\r\n\r\n.popularised-content-wrap h2 {\r\n    text-align: center;\r\n    width: 78%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.popularised-bottom-wrap {\r\n    margin-top: 112px;\r\n}\r\n\r\n.popularised-bottom-wrap .adipiscing-descript-wrap {\r\n    width: 50%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.popularised-bottom-wrap .adipiscing-descript-wrap {\r\n    padding-top: 10px;\r\n}\r\n\r\n.popularised-ful-wrap {\r\n    background: #F8F4FA;\r\n}\r\n\r\n.journal-info-img-wrap img {\r\n    max-height: 600px;\r\n}\r\n\r\n.journal-info-name-wrap {\r\n    padding-top: 60px;\r\n}\r\n\r\n.client-name-btm-brder-wrap {\r\n    border: 3px solid #BD98BB;\r\n    width: 40px;\r\n}\r\n\r\n.review-head-wrap {\r\n    width: 70%;\r\n}\r\n\r\n.review-content-full-wrap {\r\n    padding-top: 60px;\r\n}\r\n\r\n.review-content-full-wrap .review-description-wrap {\r\n    width: 90%;\r\n}\r\n\r\n.process-2nd-full-wrap {\r\n    background: white;\r\n    padding: 45px 20px 45px 20px;\r\n}\r\n\r\n.process-2nd-full-wrap h3 {\r\n    width: 80%;\r\n    margin: 20px auto;\r\n}\r\n\r\n.studio-img-full-wrap {\r\n    background: #FAFAFA;\r\n}\r\n\r\n.re-cutting-fullwrap {\r\n    background: #ffffff;\r\n}\r\n\r\n.re-cutting-heading-wrap h3 {\r\n    width: 50%;\r\n    margin: 25px auto;\r\n    line-height: 37px !important;\r\n}\r\n\r\n.re-cutting-heading-wrap p {\r\n    width: 40%;\r\n    margin: 25px auto;\r\n}\r\n\r\n.process-pg-middle-wrap p {\r\n    width: 50%;\r\n}\r\n\r\n.purple-background-bottom-section {\r\n    padding-bottom: 90px;\r\n}\r\n\r\n.studio-img-full-wrap .Occasionally-paraf {\r\n    margin-top: 20px;\r\n}\r\n\r\n.process-slider-wrap {\r\n    padding-left: 15vw;\r\n    padding-right: 15vw;\r\n}\r\n\r\n.process-slider-wrap .carousel-inner {\r\n    height: 550px;\r\n}\r\n\r\n.slider-top-abslt-txt {\r\n    position: absolute;\r\n    z-index: 9;\r\n}\r\n\r\n#processsliderindicator .carousel-caption {\r\n    top: 70% !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators li {\r\n    background-color: #C4C4C4 !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators li.active {\r\n    background-color: #2D4253 !important;\r\n}\r\n\r\n#processsliderindicator .carousel-indicators {\r\n    margin-bottom: 20px !important;\r\n}\r\n\r\n\r\n/* The container */\r\n\r\n.container-checkbox {\r\n    display: block;\r\n    position: relative;\r\n    padding-left: 35px;\r\n    margin-bottom: 12px;\r\n    cursor: pointer;\r\n    font-size: 22px;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n}\r\n\r\n\r\n/* Hide the browser's default checkbox */\r\n\r\n.container-checkbox input {\r\n    position: absolute;\r\n    opacity: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* Create a custom checkbox */\r\n\r\n.container-checkbox .checkmark {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    height: 20px;\r\n    width: 20px;\r\n    background-color: #eee;\r\n}\r\n\r\n\r\n/* On mouse-over, add a grey background color */\r\n\r\n.container-checkbox:hover input~.checkmark {\r\n    background-color: #ccc;\r\n}\r\n\r\n\r\n/* When the checkbox is checked, add a blue background */\r\n\r\n.container-checkbox input:checked~.checkmark {\r\n    background-color: #333333;\r\n}\r\n\r\n\r\n/* Create the checkmark/indicator (hidden when not checked) */\r\n\r\n.container-checkbox .checkmark:after {\r\n    content: \"\";\r\n    position: absolute;\r\n    display: none;\r\n}\r\n\r\n\r\n/* Show the checkmark when checked */\r\n\r\n.container-checkbox input:checked~.checkmark:after {\r\n    display: block;\r\n}\r\n\r\n\r\n/* Style the checkmark/indicator */\r\n\r\n.container-checkbox .checkmark:after {\r\n    left: 7px;\r\n    top: 5px;\r\n    width: 5px;\r\n    height: 10px;\r\n    border: solid white;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: rotate(45deg);\r\n    -ms-transform: rotate(45deg);\r\n    transform: rotate(45deg);\r\n}\r\n\r\n\r\n/* footer section  */\r\n\r\n.footer-bottom-description {\r\n    width: 48%;\r\n    margin: 0px auto;\r\n}\r\n\r\n.footer-second-row-wrap {\r\n    padding: 40px 0px;\r\n}\r\n\r\n.footer-main-wrap {\r\n    padding: 50px 0px;\r\n}\r\n\r\n.footer-bottom-wrap {\r\n    background: #fafafa !important;\r\n}\r\n\r\n\r\n/* @media screen and (min-width: 900px) and (max-width: 1540px) {\r\n    div#carouselExampleControls1 .carousel-item img,\r\n    #carouselExampleControls2 .carousel-item img,\r\n    #carouselExampleControls3 .carousel-item img,\r\n    #carouselExampleControls4 .carousel-item img {\r\n        min-height: 350px !important;\r\n    }\r\n} */\r\n\r\n#pinBoot {\r\n    position: relative;\r\n    max-width: 100%;\r\n    width: 100%;\r\n}\r\n\r\n#pinBoot img {\r\n    width: 100%;\r\n    max-width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.white-panel {\r\n    position: absolute;\r\n    background: white;\r\n    padding: 0px;\r\n}\r\n\r\n.home-journal-head-wrap {\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.process-head-wrap {\r\n    padding-top: 115px;\r\n}\r\n\r\n\r\n/*\r\n  stylize any heading tags withing white-panel below\r\n  */\r\n\r\n\r\n/* .white-panel:hover {\r\n    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);\r\n    margin-top: -5px;\r\n    -webkit-transition: all 0.3s ease-in-out;\r\n    -moz-transition: all 0.3s ease-in-out;\r\n    -o-transition: all 0.3s ease-in-out;\r\n    transition: all 0.3s ease-in-out;\r\n} */\r\n\r\n#faq .card {\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n}\r\n\r\n#faq .card .card-header {\r\n    border: 0;\r\n    border-radius: 2px;\r\n    padding: 0;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link {\r\n    color: #724B8E;\r\n    display: block;\r\n    text-align: left;\r\n    padding: 10px 0px;\r\n    border-bottom: 1px solid #E3E3E3;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link:after {\r\n    content: \"\\f106\";\r\n    font-family: FontAwesome;\r\n    font-weight: 900;\r\n    float: right;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link.collapsed {\r\n    color: #0D0D0D !important;\r\n}\r\n\r\n#faq .card .card-header .btn-header-link.collapsed:after {\r\n    content: \"\\f107\";\r\n}\r\n\r\n#faq .card .collapsing {\r\n    line-height: 30px;\r\n}\r\n\r\n#faq .card .collapse {\r\n    border: 0;\r\n}\r\n\r\n#faq .card .collapse.show {\r\n    line-height: 30px;\r\n    color: #222;\r\n}\r\n\r\n.card-header {\r\n    background-color: transparent !important;\r\n}\r\n\r\n.btn.focus,\r\n.btn:focus {\r\n    outline: 0 !important;\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n}\r\n\r\n#faq .card-body {\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n    padding-bottom: 0px;\r\n}\r\n\r\n.faq-accord-full-section:nth-child(even) {\r\n    background: #ffffff !important;\r\n}\r\n\r\n.faq-accord-full-section:nth-child(odd) {\r\n    background: #FAFAFA !important;\r\n}\r\n\r\n.faq-accord-full-section {\r\n    margin-top: 30px;\r\n    background: #FAFAFA;\r\n    padding: 60px 0px;\r\n}\r\n\r\n.card {\r\n    background-color: transparent !important;\r\n}\r\n\r\n\r\n/* contact page */\r\n\r\n.contact-page-separator {\r\n    margin-top: 85px;\r\n    padding-bottom: 85px;\r\n    border-top: 1px solid #E5E5E5;\r\n    width: 78%;\r\n}\r\n\r\n.contact-page-full-wrap {\r\n    background-image: url('/images/contacts/contact-side-bg-repeat.jpg');\r\n    /* background-image: url('/images/stones/subscribe-bg.jpg'); */\r\n}\r\n\r\n.contact-right-wrap8,\r\n.contact-right-wrap82 {\r\n    background-color: #FFFFFF;\r\n}\r\n\r\n.contact-right-wrap8 {\r\n    padding-top: 85px;\r\n    padding-left: 50px !important;\r\n}\r\n\r\n.contact-right-wrap82 {\r\n    padding-bottom: 85px;\r\n    padding-left: 50px !important;\r\n}\r\n\r\na.btn.btn-primary.btn-sm.btn-text {\r\n    margin-left: 550px;\r\n}\r\n\r\n\r\n/* system */\r\n\r\n.navbar-laravel {\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);\r\n}\r\n\r\n.navbar-brand,\r\n.nav-link,\r\n.my-form,\r\n.login-form {\r\n    font-family: Raleway, sans-serif;\r\n}\r\n\r\n.my-form {\r\n    padding-top: 1.5rem;\r\n    padding-bottom: 1.5rem;\r\n}\r\n\r\n.my-form .row {\r\n    margin-left: 0;\r\n    margin-right: 0;\r\n}\r\n\r\n.login-form {\r\n    padding-top: 1.5rem;\r\n    padding-bottom: 1.5rem;\r\n}\r\n\r\n.login-form .row {\r\n    margin-left: 0;\r\n    margin-right: 0;\r\n}\r\n\r\n.login-form-backend {\r\n    margin-top: 100px !important;\r\n}\r\n\r\ninput[type=\"range\"] {\r\n    -webkit-appearance: none;\r\n    margin-right: 15px;\r\n    width: 200px;\r\n    height: 7px;\r\n    background: rgba(255, 255, 255, 0.6);\r\n    border-radius: 5px;\r\n    background-image: linear-gradient(#ff4500, #ff4500);\r\n    background-size: 70% 100%;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\ninput[type=\"range\"]::-webkit-slider-thumb {\r\n    -webkit-appearance: none;\r\n    height: 20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background: #ff4500;\r\n    cursor: ew-resize;\r\n    box-shadow: 0 0 2px 0 #555;\r\n    transition: background .3s ease-in-out;\r\n}\r\n\r\ninput[type=range]::-webkit-slider-runnable-track {\r\n    -webkit-appearance: none;\r\n    box-shadow: none;\r\n    border: none;\r\n    background: transparent;\r\n}\r\n\r\n.login-logo {\r\n    text-align: center !important;\r\n}\r\n\r\n.font-medium.text-red-600 {\r\n    color: red !important;\r\n}\r\n\r\nul.mt-3.list-disc.list-inside.text-sm.text-red-600 {\r\n    color: red !important;\r\n}\r\n\r\n.logout-button {\r\n    margin: auto;\r\n    text-align: center !important;\r\n}\r\n\r\n.card-title #table-buuton {\r\n    float: right !important;\r\n}\r\n\r\n.middle-section-one {\r\n    min-height: 10em;\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n}\r\n\r\n.process-section-two {\r\n    display: flex !important;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.section-process-color {\r\n    background-color: #FFFFFF !important;\r\n}\r\n\r\n.box-wrap-content {\r\n    padding-top: 120px !important;\r\n    padding-bottom: 120px !important;\r\n    padding-right: 0px !important;\r\n    padding-left: 0px !important;\r\n}\r\n\r\n.box-wrap-content-two {\r\n    padding-top: 50px !important;\r\n    padding-bottom: 50px !important;\r\n    padding-right: 0px !important;\r\n    padding-left: 0px !important;\r\n}\r\n\r\n.image-padding-section {\r\n    padding-left: 15px !important;\r\n    padding-right: 15px !important;\r\n}\r\n\r\n.padding-slider-image {\r\n    padding-top: 10px;\r\n    padding-right: 100px !important;\r\n}\r\n\r\n.tooltip {\r\n    position: relative;\r\n    display: inline-block;\r\n    border-bottom: 1px dotted black;\r\n}\r\n\r\n.tooltip .tooltiptext {\r\n    visibility: hidden;\r\n    width: 120px;\r\n    background-color: black;\r\n    color: #fff;\r\n    text-align: center;\r\n    border-radius: 6px;\r\n    padding: 5px 0;\r\n    /* Position the tooltip */\r\n    position: absolute;\r\n    z-index: 1;\r\n}\r\n\r\n.tooltip:hover .tooltiptext {\r\n    visibility: visible;\r\n}\r\n\r\n.mobile-nav-bar,\r\n.mobile-navlinks-outer-wrap {\r\n    display: none;\r\n}\r\n\r\n.mobile-navlinks-outer-wrap {\r\n    height: 100vh;\r\n    width: 0%;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #fff;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 25px;\r\n}\r\n\r\n.mobile-navlinks-wrap {\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    background-image: url('/images/stones/subscribe-bg.jpg');\r\n}\r\n\r\n.mobile-navlinks-wrap ul {\r\n    line-height: 60px;\r\n    list-style: none;\r\n}\r\n\r\n.mobile-nav-full-wrap .mobile-nav-toggler-wrap {\r\n    top: 20%;\r\n}\r\n\r\n.mobile-navlinks-wrap ul a.nav-link {\r\n    text-align: center !important;\r\n}\r\n\r\n.mobile-nav-full-wrap .mobile-nav-toggler-wrap a {\r\n    font-size: 30px;\r\n    color: #000;\r\n}\r\n\r\n.text-new-one {\r\n    margin-left: 0px !important;\r\n}\r\n\r\n.new-padding-top-section {\r\n    margin-top: 80px !important;\r\n}\r\n\r\n.body-content-section {\r\n    margin-top: 80px !important;\r\n}\r\n\r\n.footer-bottom-wrap {\r\n    width: 100%;\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.contact-icon-envelope i,\r\n.contact-icon-instagram i {\r\n    color: #BD98BB !important;\r\n    font-size: 25px;\r\n    margin-top: 12px;\r\n}\r\n\r\n.contact-left-ful-wrap a:hover {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.contact-icon svg {\r\n    width: 24px;\r\n    height: 32px;\r\n}\r\n\r\n.left-filter-wrap-desktop {\r\n    padding-top: 40px;\r\n}\r\n\r\n.color-list-wrap {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    margin-top: 8px;\r\n}\r\n\r\n.color-list-wrap ul {\r\n    padding-right: 10px;\r\n}\r\n\r\n.color-list-wrap input[type=checkbox]:before {\r\n    position: relative !important;\r\n    font-size: 14px !important;\r\n}\r\n\r\n.color-list-wrap input[type=checkbox]:checked:before {\r\n    position: absolute;\r\n    top: -3px !important;\r\n    left: 2px !important;\r\n    border: 0px solid #3ea8df !important;\r\n}\r\n\r\ninput[type=checkbox] {\r\n    -moz-appearance: none;\r\n    -webkit-appearance: none;\r\n    -o-appearance: none;\r\n    outline: none !important;\r\n    content: none;\r\n}\r\n\r\ninput[type=checkbox]:before {\r\n    font-family: \"FontAwesome\";\r\n    content: \"\\f00c\";\r\n    font-size: 15px;\r\n    border-radius: 4px;\r\n    color: transparent !important;\r\n    background: #fff0;\r\n    display: list-item;\r\n    width: 20px;\r\n    height: 20px;\r\n    border: 2px solid #d3d6db00;\r\n}\r\n\r\ninput[type=checkbox]:checked:before {\r\n    background: #3ea8df00;\r\n    color: #606060 !important;\r\n    border: 2px solid #3ea8df;\r\n    border-radius: 50%;\r\n}\r\n\r\n.irs--big .irs-bar {\r\n    background: #BD98BB !important;\r\n    border: 1px solid #BD98BB !important;\r\n    top: 36px !important;\r\n    height: 8px !important;\r\n}\r\n\r\n.irs--big .irs-handle {\r\n    top: 30px !important;\r\n    width: 18px !important;\r\n    height: 18px !important;\r\n    background: #BD98BB !important;\r\n}\r\n\r\n.irs--big .irs-from,\r\n.irs--big .irs-to,\r\n.irs--big .irs-single {\r\n    display: none !important;\r\n}\r\n\r\n.irs--big .irs-grid-text,\r\n.irs--big .irs-grid-pol {\r\n    color: #000 !important;\r\n}\r\n\r\n.irs--big.irs-with-grid {\r\n    height: 66px;\r\n}\r\n\r\n.sorting-select {\r\n    background: #FFFFFF 0% 0% no-repeat padding-box !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n    border-radius: 2px !important;\r\n    width: 158px !important;\r\n    height: 38px !important;\r\n}\r\n\r\n.form-control:focus {\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%) !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n}\r\n\r\nselect:focus-visible {\r\n    outline-offset: 0px !important;\r\n    outline-color: 1px solid #C4C4C4 !important;\r\n    outline: -webkit-focus-ring-color auto 0px !important;\r\n}\r\n\r\n.left-filter-wrap-desktop a:hover {\r\n    text-decoration: none !important;\r\n}\r\n\r\n.product-name-descript-ful-wrap,\r\n.mobile-separator {\r\n    display: none;\r\n}\r\n\r\n.mobile-separator {\r\n    width: 100%;\r\n    height: 1px;\r\n    background: #e5e5e5;\r\n}\r\n\r\n.navbar-fixed-top {\r\n    position: fixed;\r\n    z-index: 9999;\r\n    background: #fff;\r\n    width: 100%;\r\n}\r\n\r\n#panorama-360-view {\r\n    width: 100%;\r\n    height: 400px;\r\n}\r\n\r\n.carousel-indicators li {\r\n    position: relative;\r\n    -webkit-box-flex: 0;\r\n    -ms-flex: 0 1 auto;\r\n    flex: 0 1 auto;\r\n    width: 30px;\r\n    height: 3px;\r\n    margin-right: 3px;\r\n    margin-left: 3px;\r\n    text-indent: -999px;\r\n    background-color: rgba(255, 255, 255, .5);\r\n    border-radius: 20px !important;\r\n    height: 8px !important;\r\n    width: 8px !important;\r\n}\r\n\r\n.card-header.login-header {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    font-size: 20px !important;\r\n    text-align: center !important;\r\n}\r\n\r\n.login-button-section {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    background: #724B8E !important;\r\n    color: #fff !important;\r\n    border-color: #724B8E !important;\r\n}\r\n\r\n.card.new-login-section {\r\n    border-radius: 10px !important;\r\n    background-color: #fff !important;\r\n}\r\n\r\n.login-boy-new {\r\n    background: #E9ECEE !important;\r\n}\r\n\r\n.login-lable-text {\r\n    font-family: \"EB Garamond\", serif !important;\r\n    font-size: 18px !important;\r\n}\r\n\r\n.forgot-passowrd {\r\n    font-family: \"EB Garamond\", serif !important;\r\n}\r\n\r\nli.nav-item.active .acive-color-header {\r\n    color: #BD98BB !important;\r\n}\r\n\r\na.list-inline-item.footter-class-new.active {\r\n    color: #BD98BB !important;\r\n}\r\n\r\nli.category-calss-new.active {\r\n    color: #BD98BB !important;\r\n}\r\n\r\n.reviews-button-new {\r\n    text-align: center;\r\n    margin: auto;\r\n    display: block;\r\n}\r\n\r\n.desktop-left-navbar {\r\n    flex-direction: row;\r\n    align-content: space-between;\r\n    justify-content: space-evenly;\r\n}\r\n\r\n.desktop-left-navbar .navbar-nav .nav-item,\r\n.desktop-right-navbar .navbar-nav .nav-item {\r\n    padding: 15px;\r\n    padding-left: 0px;\r\n}\r\n\r\n.carousel-control-prev-icon {\r\n    background-image: url('/images/Home/left-arrow-svgrepo.svg') !important;\r\n}\r\n\r\n.carousel-control-next-icon {\r\n    background-image: url('/images/Home/right-arrow-svgrepo.svg') !important;\r\n}\r\n\r\n.home-slider-wrap .carousel-control-next-icon,\r\n.home-slider-wrap .carousel-control-prev-icon {\r\n    width: 50px !important;\r\n    height: 50px !important;\r\n}\r\n\r\n.carousel-control-next-icon,\r\n.carousel-control-prev-icon {\r\n    width: 35px !important;\r\n    height: 35px !important;\r\n}\r\n\r\n.genesis-middle-left-wrap h1 {\r\n    line-height: 50px !important;\r\n}\r\n\r\n.day-light-left-wrap {\r\n    display: block !important;\r\n}\r\n\r\n.day-light-left-wrap img {\r\n    width: 100% !important;\r\n    object-fit: cover;\r\n    height: 415px;\r\n}\r\n\r\n.day-light-right-wrap .inner-section-slider {\r\n    padding-left: 30px;\r\n    width: 90%;\r\n}\r\n\r\n.process-bottom-slider-wrap .carousel-item.image-slider img {\r\n    height: 310px;\r\n    object-fit: cover;\r\n}\r\n\r\n.day-light-right-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n}\r\n\r\n.left-catergory-wrap-column {\r\n    padding-left: 30px !important;\r\n}\r\n\r\n.img-container {\r\n    /* border: 1px solid #ccc; */\r\n    width: 100%;\r\n    max-width: 100%;\r\n    margin: 0 auto;\r\n    padding: 0;\r\n    cursor: ew-resize;\r\n}\r\n\r\n.img360 {\r\n    width: 100%;\r\n    margin: 0;\r\n    padding: 0;\r\n    line-height: 0;\r\n}\r\n\r\n.img360 img {\r\n    width: 100%;\r\n}\r\n\r\n#preload-imgs {\r\n    display: none;\r\n}\r\n\r\n.process-bottom-slider-wrap {\r\n    display: block !important;\r\n}\r\n\r\n.process-finally-let-wrap img,\r\n.process-finally-wrap {\r\n    width: 100% !important;\r\n    max-height: 450px !important;\r\n}\r\n\r\n.process-finally-right-wrap {\r\n    max-height: 450px !important;\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.w-75,\r\n.w-75 p {\r\n    width: 75% !important;\r\n}\r\n\r\n.process-daylight-ful-wrap {\r\n    margin-top: 45px;\r\n}\r\n\r\n.golden-standard-left-wrap {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: wrap;\r\n    align-content: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.golden-standard-full-wrap .process-head-txt {\r\n    width: 80%;\r\n}\r\n\r\n.navbar-fixed-top-main {\r\n    position: fixed !important;\r\n}\r\n\r\n.nav-item-fixed {\r\n    display: none;\r\n}\r\n\r\n.mobile-navlink-top-wrap {\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.close-btn-wrap {\r\n    top: 0% !important;\r\n}\r\n\r\n.mobile-genis-map {\r\n    display: none;\r\n}\r\n\r\n.link-explore img {\r\n    width: 20px;\r\n    margin-left: -4px;\r\n}\r\n\r\na.btn.btn-link.forgot-passowrd {\r\n    color: #724B8E !important;\r\n}\r\n\r\n.review-main-wrap .card-columns {\r\n    column-count: 2 !important;\r\n}\r\n\r\n.review-main-wrap {\r\n    padding-top: 30px;\r\n}\r\n\r\n.review-main-wrap .card {\r\n    border: 0px solid rgba(0, 0, 0, .125) !important;\r\n}\r\n\r\n.mobile-rotate-wrap {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: fixed;\r\n    background-color: #fff;\r\n    z-index: 1111111111111;\r\n}\r\n\r\np.rotate {\r\n    text-align: center;\r\n    top: 30%;\r\n    position: relative;\r\n    font-family: \"Open Sans\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 400;\r\n    line-height: 25px;\r\n    letter-spacing: 0px;\r\n}\r\n\r\ni.fa.fa-mobile {\r\n    font-size: 40px !important;\r\n}\r\n\r\n.top-breadcrum-wrap {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.main-nav {\r\n    box-shadow: 0px 1px 4px #0000000F;\r\n}\r\n\r\n.top-breadcrum-wrap {\r\n    padding: 10px;\r\n}\r\n\r\n.page-name-braker {\r\n    padding: 0px 25px;\r\n}\r\n\r\n.left-filter-wrap-desktop .sorting-select {\r\n    text-align: left !important;\r\n}\r\n\r\n.pagination .page-link {\r\n    padding: 8px 18px !important;\r\n    border: 1px solid #C4C4C4 !important;\r\n    border-radius: 2px !important;\r\n}\r\n\r\n.pagination .page-item.active .page-link {\r\n    background: #FFFFFF 0% 0% no-repeat padding-box !important;\r\n    border: 1px solid #724B8E !important;\r\n    border-radius: 2px !important;\r\n}\r\n\r\n.pagination .page-link {\r\n    letter-spacing: 0.04px !important;\r\n}\r\n\r\n\r\n/* Стили для основного блока Preloader */\r\n\r\n.preloader {\r\n    /* Фиксируем блок на всю ширину и высоту окна, чтобы перекрывать все остальные элементы */\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 999999999999;\r\n    /* Центрируем анимацию Preloader */\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    /* При загрузке страницы, Preloader сразу отображается */\r\n    opacity: 1;\r\n    visibility: visible;\r\n    /* Добавляем затемнение */\r\n    background: white !important;\r\n    /* Добавляем плавный переход */\r\n    transition: opacity 1s, visibility 0s 0s;\r\n}\r\n\r\n\r\n/* Класс для скрытия Preloader */\r\n\r\n.preloader_hidden {\r\n    visibility: hidden;\r\n    opacity: 0;\r\n    transition: opacity 1s, visibility 0s 1s;\r\n}\r\n\r\n\r\n/* Скопированый код анимации Preloader */\r\n\r\n.sk-chase {\r\n    width: 250px;\r\n    height: 250px;\r\n    /* background: #fff; */\r\n    position: relative;\r\n    -webkit-animation: sk-chase 2.5s infinite linear both;\r\n    animation: sk-chase 2.5s infinite linear both;\r\n}\r\n\r\n.sk-chase-dot {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    -webkit-animation: sk-chase-dot 2s infinite ease-in-out both;\r\n    animation: sk-chase-dot 2s infinite ease-in-out both;\r\n}\r\n\r\n.sk-chase-dot:before {\r\n    content: '';\r\n    background-image: url('/images/d2e1d4a48e6f08379588df48168dd0d8.gif') !important;\r\n    display: block !important;\r\n    width: 100% !important;\r\n    height: 100% !important;\r\n    background-repeat: no-repeat !important;\r\n    background-size: contain !important;\r\n    background-position: center !important;\r\n    /* background-color: #3626a7; */\r\n    /* -webkit-animation: sk-chase-dot-before 5s infinite ease-in-out both !important;\r\n    animation: sk-chase-dot-before 5s infinite ease-in-out both !important;  */\r\n}\r\n\r\n.sk-chase-dot:nth-child(1) {\r\n    -webkit-animation-delay: -1.1s;\r\n    animation-delay: -1.1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(2) {\r\n    -webkit-animation-delay: -1s;\r\n    animation-delay: -1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(3) {\r\n    -webkit-animation-delay: -0.9s;\r\n    animation-delay: -0.9s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(4) {\r\n    -webkit-animation-delay: -0.8s;\r\n    animation-delay: -0.8s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(5) {\r\n    -webkit-animation-delay: -0.7s;\r\n    animation-delay: -0.7s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(6) {\r\n    -webkit-animation-delay: -0.6s;\r\n    animation-delay: -0.6s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(1):before {\r\n    -webkit-animation-delay: -1.1s;\r\n    animation-delay: -1.1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(2):before {\r\n    -webkit-animation-delay: -1s;\r\n    animation-delay: -1s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(3):before {\r\n    -webkit-animation-delay: -0.9s;\r\n    animation-delay: -0.9s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(4):before {\r\n    -webkit-animation-delay: -0.8s;\r\n    animation-delay: -0.8s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(5):before {\r\n    -webkit-animation-delay: -0.7s;\r\n    animation-delay: -0.7s;\r\n}\r\n\r\n.sk-chase-dot:nth-child(6):before {\r\n    -webkit-animation-delay: -0.6s;\r\n    animation-delay: -0.6s;\r\n}\r\n\r\n\r\n/* @-webkit-keyframes sk-chase {\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@keyframes sk-chase {\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@-webkit-keyframes sk-chase-dot {\r\n    80%,\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n} */\r\n\r\n\r\n/* @keyframes sk-chase-dot {\r\n    80%,\r\n    100% {\r\n        transform: rotate(360deg);\r\n    }\r\n} */\r\n\r\n@-webkit-keyframes sk-chase-dot-before {\r\n    50% {\r\n        transform: scale(0.4);\r\n    }\r\n    100%,\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n\r\n@keyframes sk-chase-dot-before {\r\n    50% {\r\n        transform: scale(0.4);\r\n    }\r\n    100%,\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n\r\n.pagination .page-link:hover {\r\n    background: #FFF8FF !important;\r\n}\r\n\r\n.journal-pagination-wrap {\r\n    width: 100%;\r\n    /* text-align: center; */\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n\r\n/* QA */\r\n\r\n.footer-right-side {\r\n    text-align: right !important;\r\n    margin-right: 15px !important;\r\n    display: block !important;\r\n}\r\n\r\n.adamant-backend-log-full-wrap {\r\n    margin-top: 0px !important;\r\n    padding-top: 0px !important;\r\n    display: flex;\r\n    flex-direction: column;\r\n    height: 100%;\r\n    align-content: center;\r\n    justify-content: center;\r\n}\r\n\r\n.pagination {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    padding-left: 0;\r\n    list-style: none;\r\n    border-radius: 0.25rem;\r\n    justify-content: flex-end !important;\r\n}\r\n\r\n.stone-gap .ourstone-wrap {\r\n    min-height: 300px;\r\n    height: 300px;\r\n    -o-object-fit: cover;\r\n    object-fit: cover;\r\n    -o-object-position: center center;\r\n    object-position: center center;\r\n}\r\n\r\n[type=reset],\r\n[type=submit],\r\nbutton,\r\nhtml [type=button] {\r\n    -webkit-appearance: media-slider !important;\r\n}\r\n\r\n.journal-info-contents.mt-4.pb-5 p {\r\n    font-family: \"EB Garamond\", serif !important;\r\n}\r\n\r\n.home-middle-banner-bottom-txt-wrap h1 {\r\n    width: 60%;\r\n    line-height: 50px !important;\r\n}\r\n\r\n.journal-info-section .journal-info-contents img {\r\n    height: auto !important;\r\n    width: 100% !important;\r\n    object-fit: contain !important;\r\n}\r\n\r\n.journal-info-img-wrap img {\r\n    max-height: 600px;\r\n    object-fit: cover;\r\n}\r\n\r\nbutton.btn.btn-primary.login-button-section.w-100 {\r\n    margin-bottom: 20px !important;\r\n}\r\n\r\np.new-text {\r\n    font-weight: normal !important;\r\n    font-family: \"Calibri\";\r\n    src: url(\"/fonts/Calibri-Light.woff2\") format(\"woff2\"), url(\"/fonts/Calibri-Light.woff\") format(\"woff\");\r\n    text-align: left;\r\n    position: absolute;\r\n    margin-left: auto;\r\n    background: #BD98BB;\r\n    color: white;\r\n    padding: 5px;\r\n    border-radius: 0px 0px 0px 10px;\r\n    font-size: 13px;\r\n    letter-spacing: 1.2px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n.products_listing-wrap {\r\n    text-align: center !important;\r\n}\r\n\r\np.count-text.paraf1 {\r\n    margin-top: -50px;\r\n}\r\n\r\ninput[type=checkbox] {\r\n    box-sizing: border-box;\r\n    padding: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.paraf-margin {\r\n    margin-top: 20px;\r\n}\r\n\r\n.privacy-color {\r\n    font-weight: 500;\r\n    color: #000;\r\n}\r\n\r\n.paraf-padding {\r\n    padding-top: 10px;\r\n}\r\n\r\n.category-prod-img-wrap a {\r\n    display: flex;\r\n    flex-direction: row-reverse;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29768,9 +29767,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _HomeComponent_vue_vue_type_template_id_782dcf83___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeComponent.vue?vue&type=template&id=782dcf83& */ "./resources/js/components/HomeComponent.vue?vue&type=template&id=782dcf83&");
 /* harmony import */ var _HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/HomeComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
-/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -29846,11 +29842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomeComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/HomeComponent.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
-/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default())); 
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -30415,14 +30407,233 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "left-filter-wrap-desktop" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-2 left-catergory-wrap-column" }, [
+            _c("div", { staticClass: "sidebar-main-wrap" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "sidebar-section-2" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "categoryname-list-wrap main-category-list-wrap",
+                  },
+                  [
+                    _c(
+                      "ul",
+                      { staticClass: "pl-0" },
+                      _vm._l(_vm.ca_all.data, function (category) {
+                        return _c(
+                          "li",
+                          {
+                            key: category.id,
+                            staticClass: "category-calss-new",
+                          },
+                          [
+                            _c("div", { staticClass: "shape-style-wrap" }, [
+                              _c(
+                                "label",
+                                { staticClass: "container-checkbox" },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.Category_filter,
+                                        expression: "Category_filter",
+                                      },
+                                    ],
+                                    staticClass: "Category_filter",
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "Category_filter",
+                                    },
+                                    domProps: {
+                                      value: category.id,
+                                      checked: Array.isArray(
+                                        _vm.Category_filter
+                                      )
+                                        ? _vm._i(
+                                            _vm.Category_filter,
+                                            category.id
+                                          ) > -1
+                                        : _vm.Category_filter,
+                                    },
+                                    on: {
+                                      change: function ($event) {
+                                        var $$a = _vm.Category_filter,
+                                          $$el = $event.target,
+                                          $$c = $$el.checked ? true : false
+                                        if (Array.isArray($$a)) {
+                                          var $$v = category.id,
+                                            $$i = _vm._i($$a, $$v)
+                                          if ($$el.checked) {
+                                            $$i < 0 &&
+                                              (_vm.Category_filter = $$a.concat(
+                                                [$$v]
+                                              ))
+                                          } else {
+                                            $$i > -1 &&
+                                              (_vm.Category_filter = $$a
+                                                .slice(0, $$i)
+                                                .concat($$a.slice($$i + 1)))
+                                          }
+                                        } else {
+                                          _vm.Category_filter = $$c
+                                        }
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "checkmark" }),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "shape-name-wrap" }, [
+                                _c("p", { staticClass: "mb-0" }, [
+                                  _vm._v(_vm._s(category.cat_name)),
+                                ]),
+                              ]),
+                            ]),
+                          ]
+                        )
+                      }),
+                      0
+                    ),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "sidebar-section-3" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "categoryname-list-wrap available-list-wrap main-category-list-wrap",
+                    attrs: { id: "avalable-filter-id" },
+                  },
+                  [
+                    _c(
+                      "ul",
+                      { staticClass: "pl-0" },
+                      _vm._l(_vm.av_all.data, function (availability) {
+                        return _c(
+                          "li",
+                          {
+                            key: availability.id,
+                            staticClass: "category-calss-new",
+                          },
+                          [
+                            _c("div", { staticClass: "shape-style-wrap" }, [
+                              _c(
+                                "label",
+                                { staticClass: "container-checkbox" },
+                                [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.Available_filter,
+                                        expression: "Available_filter",
+                                      },
+                                    ],
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "Available_filter",
+                                    },
+                                    domProps: {
+                                      value: availability.id,
+                                      checked: Array.isArray(
+                                        _vm.Available_filter
+                                      )
+                                        ? _vm._i(
+                                            _vm.Available_filter,
+                                            availability.id
+                                          ) > -1
+                                        : _vm.Available_filter,
+                                    },
+                                    on: {
+                                      change: function ($event) {
+                                        var $$a = _vm.Available_filter,
+                                          $$el = $event.target,
+                                          $$c = $$el.checked ? true : false
+                                        if (Array.isArray($$a)) {
+                                          var $$v = availability.id,
+                                            $$i = _vm._i($$a, $$v)
+                                          if ($$el.checked) {
+                                            $$i < 0 &&
+                                              (_vm.Available_filter =
+                                                $$a.concat([$$v]))
+                                          } else {
+                                            $$i > -1 &&
+                                              (_vm.Available_filter = $$a
+                                                .slice(0, $$i)
+                                                .concat($$a.slice($$i + 1)))
+                                          }
+                                        } else {
+                                          _vm.Available_filter = $$c
+                                        }
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "checkmark" }),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "shape-name-wrap" }, [
+                                _c("p", { staticClass: "mb-0" }, [
+                                  _vm._v(_vm._s(availability.av_name)),
+                                ]),
+                              ]),
+                            ]),
+                          ]
+                        )
+                      }),
+                      0
+                    ),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _vm._m(7),
+              _vm._v(" "),
+              _vm._m(8),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(9),
+        ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(10),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { attrs: { id: "category-filters" } }, [
       _c(
         "div",
         {
@@ -30433,533 +30644,229 @@ var staticRenderFns = [
           },
         },
         [
-          _c("div", { staticClass: "banner-main-txt-wrap" }, [
-            _c("div", { staticClass: "main-head-wrap" }, [
-              _c("h1", { staticClass: "txt-white" }, [_vm._v("Sapphire")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "banner-descript-wrap" }, [
-              _c("p", { staticClass: "paraf1 txt-white" }, [
-                _vm._v(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum\n          has been the industry’s standard dummy text ever since the 1500s, unknown printer took a galley of type and\n          scrambled it to make a type. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                ),
+          _c(
+            "div",
+            { staticClass: "banner-main-txt-wrap catergory-banner-main-wrap" },
+            [
+              _c("div", { staticClass: "main-head-wrap" }, [
+                _c("h1", { staticClass: "txt-white" }, [
+                  _vm._v("sjscjsjcsjcsjcsaj"),
+                ]),
               ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "banner-descript-wrap catergory-banner-descripion",
+                },
+                [
+                  _c("p", { staticClass: "paraf1 txt-white" }, [
+                    _vm._v("scscksksakaskckckacak"),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-1" }, [
+      _c("div", { staticClass: "filterby-txt-wrap" }, [
+        _c("p", { staticClass: "paraf1" }, [_vm._v("Filter by")]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "clearall-txt-wrap" }, [
+        _c(
+          "a",
+          {
+            staticClass: "side-bar-clear-link",
+            staticStyle: { cursor: "pointer" },
+            attrs: { id: "select" },
+          },
+          [_vm._v("Clear all")]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "new-class-id" }, [_vm._v("dfdsfjsfjsjaaja")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "categoryname-headtxt-wrap category-head-txt-wrap" },
+      [
+        _c("p", { staticClass: "sidebar-main-category-names sidebar-title" }, [
+          _vm._v("Category"),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "available-headtxt-wrap category-head-txt-wrap" },
+      [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Availability")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-4" }, [
+      _c(
+        "div",
+        { staticClass: "available-headtxt-wrap category-head-txt-wrap" },
+        [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Colors")])]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "categoryname-list-wrap main-category-list-wrap color-list-wrap",
+        },
+        [
+          _c("ul", { staticClass: "pl-0" }, [
+            _c("li", [
+              _c(
+                "div",
+                {
+                  staticClass: "color-codes-wrap",
+                  staticStyle: { background: "red" },
+                },
+                [
+                  _c("input", {
+                    staticClass: "color_name",
+                    attrs: {
+                      type: "checkbox",
+                      name: "color_name",
+                      id: "checkbox",
+                      value: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" }),
+                ]
+              ),
             ]),
           ]),
         ]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-5" }, [
+      _c("div", { staticClass: "shape-headtxt-wrap category-head-txt-wrap" }, [
+        _c("p", { staticClass: "sidebar-title" }, [_vm._v("Shape")]),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-3" }, [
-            _c("div", { staticClass: "sidebar-main-wrap" }, [
-              _c("div", { staticClass: "sidebar-section-1" }, [
-                _c("div", { staticClass: "filterby-txt-wrap" }, [
-                  _c("p", { staticClass: "paraf1" }, [_vm._v("Filter by")]),
-                ]),
+      _c("div", { staticClass: "shape-list-wrap" }, [
+        _c("ul", { staticClass: "pl-0" }, [
+          _c("li", [
+            _c("div", { staticClass: "shape-style-wrap" }, [
+              _c("label", { staticClass: "container-checkbox" }, [
+                _c("input", {
+                  staticClass: "shape_filter",
+                  attrs: { type: "checkbox", name: "shape_filter", value: "" },
+                }),
                 _vm._v(" "),
-                _c("div", { staticClass: "clearall-txt-wrap" }, [
-                  _c("a", { staticClass: "paraf5", attrs: { href: "#" } }, [
-                    _vm._v("Clear all"),
-                  ]),
-                ]),
+                _c("span", { staticClass: "checkmark" }),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-2" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "categoryname-headtxt-wrap category-head-txt-wrap",
+              _c("div", { staticClass: "shape-img-wrap" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/images/stone_category/shape-cushion.svg",
+                    alt: "adamant-gem",
+                    srcset: "",
                   },
-                  [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "sidebar-main-category-names sidebar-title",
-                      },
-                      [_vm._v("Category")]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "categoryname-list-wrap main-category-list-wrap",
-                  },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [_vm._v("Sapphire")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Spinel")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Chrysoberyl")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Tourmaline")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Garnet ")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Other Varieties")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Add-ons")]),
-                    ]),
-                  ]
-                ),
+                }),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "available-headtxt-wrap category-head-txt-wrap",
-                  },
-                  [
-                    _c("p", { staticClass: "sidebar-title" }, [
-                      _vm._v("Availability"),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "categoryname-list-wrap main-category-list-wrap",
-                  },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [_vm._v("Available Gems")]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Recently Sold")]),
-                    ]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-4" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "available-headtxt-wrap category-head-txt-wrap",
-                  },
-                  [
-                    _c("p", { staticClass: "sidebar-title" }, [
-                      _vm._v("Colours"),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "categoryname-list-wrap main-category-list-wrap",
-                  },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [
-                        _c("div", { staticClass: "color-codes-wrap" }),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-5" }, [
-                _c(
-                  "div",
-                  { staticClass: "shape-headtxt-wrap category-head-txt-wrap" },
-                  [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Shape")])]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "shape-list-wrap" }, [
-                  _c("ul", { staticClass: "pl-0" }, [
-                    _c("li", [
-                      _c("div", { staticClass: "shape-style-wrap" }, [
-                        _c("label", { staticClass: "container-checkbox" }, [
-                          _c("input", {
-                            attrs: { type: "checkbox", checked: "checked" },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "checkmark" }),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "shape-img-wrap" }, [
-                          _c("img", {
-                            attrs: {
-                              src: "/images/stone_category/shape-round.svg",
-                              alt: "",
-                              srcset: "",
-                            },
-                          }),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "shape-name-wrap" }, [
-                          _c("p", { staticClass: "mb-0" }, [_vm._v("Round")]),
-                        ]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("div", { staticClass: "shape-style-wrap" }, [
-                        _c("label", { staticClass: "container-checkbox" }, [
-                          _c("input", {
-                            attrs: { type: "checkbox", checked: "checked" },
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "checkmark" }),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "shape-img-wrap" }, [
-                          _c("img", {
-                            attrs: {
-                              src: "/images/stone_category/shape-squar.svg",
-                              alt: "",
-                              srcset: "",
-                            },
-                          }),
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "shape-name-wrap" }, [
-                          _c("p", { staticClass: "mb-0" }, [_vm._v("Squar")]),
-                        ]),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-6" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "Clarity-headtxt-wrap category-head-txt-wrap",
-                  },
-                  [
-                    _c("p", { staticClass: "sidebar-title" }, [
-                      _vm._v("Clarity"),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "Clarity-list-wrap main-category-list-wrap" },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [
-                        _c("div", { staticClass: "Clarity-style-wrap" }, [
-                          _c("label", { staticClass: "container-checkbox" }, [
-                            _vm._v("Opaque\n                      "),
-                            _c("input", {
-                              attrs: { type: "checkbox", checked: "checked" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "checkmark" }),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-7" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "enhancement-headtxt-wrap category-head-txt-wrap",
-                  },
-                  [
-                    _c("p", { staticClass: "sidebar-title" }, [
-                      _vm._v("Enhancements"),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "enhancement-list-wrap main-category-list-wrap",
-                  },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [
-                        _c("div", { staticClass: "enhancement-style-wrap" }, [
-                          _c("label", { staticClass: "container-checkbox" }, [
-                            _vm._v("Standard Heated\n                      "),
-                            _c("input", {
-                              attrs: { type: "checkbox", checked: "checked" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "checkmark" }),
-                          ]),
-                          _vm._v(" "),
-                          _c("label", { staticClass: "container-checkbox" }, [
-                            _vm._v("Unheated\n                      "),
-                            _c("input", {
-                              attrs: { type: "checkbox", checked: "checked" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "checkmark" }),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "sidebar-section-8" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "caratweight-headtxt-wrap category-head-txt-wrap",
-                  },
-                  [
-                    _c("p", { staticClass: "sidebar-title" }, [
-                      _vm._v("Carat Weight"),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "caratweight-list-wrap main-category-list-wrap",
-                  },
-                  [
-                    _c("ul", { staticClass: "pl-0" }, [
-                      _c("li", [
-                        _c("div", { staticClass: "caratweight-style-wrap" }, [
-                          _c("label", { staticClass: "container-checkbox" }, [
-                            _vm._v("Standard Heated\n                      "),
-                            _c("input", {
-                              attrs: { type: "checkbox", checked: "checked" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "checkmark" }),
-                          ]),
-                          _vm._v(" "),
-                          _c("label", { staticClass: "container-checkbox" }, [
-                            _vm._v("Unheated\n                      "),
-                            _c("input", {
-                              attrs: { type: "checkbox", checked: "checked" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "checkmark" }),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-9" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-6" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "products_listing-wrap" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "category-prod-img-wrap" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/images/stone_category/product/sapphire-cate-img2.jpg",
-                        width: "100%",
-                        alt: "",
-                        srcset: "",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-name-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 mb-0" }, [
-                        _vm._v("Pink Sapphire, 0.76 ct."),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-desc-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 txt-dark-gray" }, [
-                        _vm._v("Hot pink to fuchsia"),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "category-prod-img-wrap" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/images/stone_category/product/sapphire-cate-img3.jpg",
-                        width: "100%",
-                        alt: "",
-                        srcset: "",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-name-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 mb-0" }, [
-                        _vm._v("Pink Sapphire, 0.76 ct."),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-desc-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 txt-dark-gray" }, [
-                        _vm._v("Hot pink to fuchsia"),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "category-prod-img-wrap" }, [
-                    _c("img", {
-                      attrs: {
-                        src: "/images/stone_category/product/sapphire-cate-img.jpg",
-                        width: "100%",
-                        alt: "",
-                        srcset: "",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-name-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 mb-0" }, [
-                        _vm._v("Pink Sapphire, 0.76 ct."),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "category-prod-desc-wrap txt-center" },
-                    [
-                      _c("p", { staticClass: "paraf2 txt-dark-gray" }, [
-                        _vm._v("Hot pink to fuchsia"),
-                      ]),
-                    ]
-                  ),
-                ]),
+              _c("div", { staticClass: "shape-name-wrap" }, [
+                _c("p", { staticClass: "mb-0" }, [_vm._v("asjajsjsjsja")]),
               ]),
             ]),
           ]),
         ]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-6" }, [
+      _c(
+        "div",
+        { staticClass: "Clarity-headtxt-wrap category-head-txt-wrap" },
+        [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Clarity")])]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "Clarity-list-wrap main-category-list-wrap" }, [
+        _c("ul", { staticClass: "pl-0" }, [
+          _c("li", [
+            _c("div", { staticClass: "Clarity-style-wrap" }, [
+              _c("label", { staticClass: "container-checkbox" }, [
+                _vm._v("jasdjsadjsadjsaj\n                               "),
+                _c("input", {
+                  staticClass: "clarity_filter",
+                  attrs: { type: "checkbox", value: "" },
+                }),
+                _vm._v(" "),
+                _c("span", { staticClass: "checkmark" }),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-7" }, [
+      _c(
+        "div",
+        { staticClass: "enhancement-headtxt-wrap category-head-txt-wrap" },
+        [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Enhancements")])]
+      ),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-logo-mainwrap home-colord-logo-mainwrap" },
+        { staticClass: "enhancement-list-wrap main-category-list-wrap" },
         [
-          _c("div", { staticClass: "container-fluid" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
-                    _c("img", {
-                      staticClass: "home-middle-logo-img",
-                      attrs: { src: "/images/home-icon-1.png", alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "h3",
-                      { staticClass: "home-middle-logo-head txt-purple" },
-                      [_vm._v("Lorem Ipsum is simply dummy text")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "mb-0 home-middle-logo-descript paraf2" },
-                      [
-                        _vm._v(
-                          "Lorem Ipsum is simply dummy text of the printing and\n                typesetting\n                industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an."
-                        ),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
-                    _c("img", {
-                      staticClass: "home-middle-logo-img",
-                      attrs: { src: "/images/home-icon-2.png", alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "h3",
-                      { staticClass: "home-middle-logo-head txt-purple" },
-                      [_vm._v("Lorem Ipsum is simply dummy text")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "mb-0 home-middle-logo-descript paraf2" },
-                      [
-                        _vm._v(
-                          "Lorem Ipsum is simply dummy text of the printing and\n                typesetting\n                industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an."
-                        ),
-                      ]
-                    ),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
-                    _c("img", {
-                      staticClass: "home-middle-logo-img",
-                      attrs: { src: "/images/home-icon-3.png", alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "h3",
-                      { staticClass: "home-middle-logo-head txt-purple" },
-                      [_vm._v("Lorem Ipsum is simply dummy text")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      { staticClass: "mb-0 home-middle-logo-descript paraf2" },
-                      [
-                        _vm._v(
-                          "Lorem Ipsum is simply dummy text of the printing and\n                typesetting\n                industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an."
-                        ),
-                      ]
-                    ),
-                  ]),
+          _c("ul", { staticClass: "pl-0" }, [
+            _c("li", [
+              _c("div", { staticClass: "enhancement-style-wrap" }, [
+                _c("label", { staticClass: "container-checkbox" }, [
+                  _vm._v("asjjdjadjja\n                               "),
+                  _c("input", {
+                    staticClass: "enhancement_filter",
+                    attrs: {
+                      type: "checkbox",
+                      name: "enhancement_filter",
+                      value: "",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" }),
                 ]),
               ]),
             ]),
@@ -30967,6 +30874,273 @@ var staticRenderFns = [
         ]
       ),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar-section-8" }, [
+      _c(
+        "div",
+        { staticClass: "caratweight-headtxt-wrap category-head-txt-wrap" },
+        [_c("p", { staticClass: "sidebar-title" }, [_vm._v("Carat Weight")])]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "caratweight-list-wrap main-category-list-wrap" },
+        [
+          _c("ul", { staticClass: "pl-0" }, [
+            _c("li", [
+              _c("div", { staticClass: "caratweight-style-wrap" }, [
+                _c(
+                  "select",
+                  {
+                    staticClass: "form-control sorting-select",
+                    attrs: { id: "weight_by" },
+                  },
+                  [
+                    _c(
+                      "option",
+                      { attrs: { selected: "", disabled: "", hidden: "" } },
+                      [_vm._v("Weight")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          id: "CARAT WEIGHT: 0.00 - 0.99",
+                          value: "0.00 - 0.99",
+                        },
+                      },
+                      [_vm._v("0.00 - 0.99")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          id: "CARAT WEIGHT: 1.00 - 1.99",
+                          value: "1.00-1.99",
+                        },
+                      },
+                      [_vm._v("1.00 - 1.99")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          id: "CARAT WEIGHT: 2.00 - 2.99",
+                          value: "2.00-2.99",
+                        },
+                      },
+                      [_vm._v("2.00 - 2.99")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "option",
+                      {
+                        attrs: {
+                          id: "CARAT WEIGHT: 3.00 +",
+                          value: "3.00-100.00",
+                        },
+                      },
+                      [_vm._v("3.00 +")]
+                    ),
+                  ]
+                ),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-10" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-6 sort-by-select",
+            attrs: { id: "sort-by-mobile" },
+          },
+          [
+            _c(
+              "select",
+              {
+                staticClass: "form-control sorting-select",
+                attrs: { id: "select_by" },
+              },
+              [
+                _c(
+                  "option",
+                  { attrs: { selected: "", disabled: "", hidden: "" } },
+                  [_vm._v("Sort by Weight")]
+                ),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "Newest" } }, [
+                  _vm._v("Max to Min"),
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "Weight" } }, [
+                  _vm._v("Min to Max"),
+                ]),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6", attrs: { id: "mobile-pagi" } }),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "products_listing-wrap",
+          attrs: { id: "speakerResponse" },
+        },
+        [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "category-prod-img-wrap" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("p", { staticClass: "new-text" }, [_vm._v("Available")]),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: {
+                      src: "/images/stone_category/product/sapphire-cate-img.jpg",
+                      width: "100%",
+                      alt: "adamant-gem",
+                      srcset: "",
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "category-prod-name-wrap txt-center" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("p", { staticClass: "paraf1 mb-0" }, [
+                    _vm._v("sadhhasdh, asjjjasd ct."),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "category-prod-desc-wrap txt-center" }, [
+                _c("p", { staticClass: "paraf2 txt-dark-gray" }, [
+                  _vm._v("sadjjasdjasja"),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "home-logo-mainwrap home-colord-logo-mainwrap" },
+      [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
+                  _c("img", {
+                    staticClass: "home-middle-logo-img",
+                    attrs: {
+                      src: "/images/home-icon-1.png",
+                      alt: "adamant-gem",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "home-middle-logo-head txt-purple" },
+                    [_vm._v("Lorem Ipsum is simply dummy text")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "mb-0 home-middle-logo-descript paraf2" },
+                    [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and\n                      typesetting\n                      industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an.\n                   "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
+                  _c("img", {
+                    staticClass: "home-middle-logo-img",
+                    attrs: {
+                      src: "/images/home-icon-2.png",
+                      alt: "adamant-gem",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "home-middle-logo-head txt-purple" },
+                    [_vm._v("Lorem Ipsum is simply dummy text")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "mb-0 home-middle-logo-descript paraf2" },
+                    [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and\n                      typesetting\n                      industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an.\n                   "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "home-middle-logo-main-wrap" }, [
+                  _c("img", {
+                    staticClass: "home-middle-logo-img",
+                    attrs: {
+                      src: "/images/home-icon-3.png",
+                      alt: "adamant-gem",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "home-middle-logo-head txt-purple" },
+                    [_vm._v("Lorem Ipsum is simply dummy text")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "mb-0 home-middle-logo-descript paraf2" },
+                    [
+                      _vm._v(
+                        "Lorem Ipsum is simply dummy text of the printing and\n                      typesetting\n                      industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an.\n                   "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true

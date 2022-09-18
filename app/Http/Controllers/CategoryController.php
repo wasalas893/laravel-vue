@@ -18,6 +18,8 @@ class CategoryController extends Controller
         $categorys=Categorys::orderBy('id','desc')->get();
 
         
+
+        
         return view('backend.category.all_category',compact('categorys'));
     }
 

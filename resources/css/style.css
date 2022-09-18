@@ -766,7 +766,7 @@ h2.stone-head-txt {
 /* product category page */
 
 .top-banner-main-wrap {
-    min-height: 350px !important;
+    min-height: 500px !important;
     position: relative !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -775,7 +775,7 @@ h2.stone-head-txt {
 
 .banner-main-txt-wrap {
     position: absolute !important;
-    top: 24% !important;
+    top: 60% !important;
     text-align: center !important;
     width: 100% !important;
 }
@@ -1831,7 +1831,7 @@ select:focus-visible {
 }
 
 .navbar-fixed-top {
-    position: inherit;
+    position: fixed;
     z-index: 9999;
     background: #fff;
     width: 100%;
